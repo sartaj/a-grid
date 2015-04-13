@@ -1,5 +1,13 @@
 (function(window, document, undefined) {
 
+    var CSS_MAP = {
+        'col-small': 'col-xs-',
+        'col-large': 'col-md-',
+        'align-x': 'contentX-xs-',
+        'align-y': 'contentY-xs-',
+        'row': 'row'
+    };
+
     // Creates an object based in the HTML Element prototype
     var MyElementProto = Object.create(HTMLElement.prototype);
 
@@ -22,11 +30,11 @@
             }
 
             if ($attr['col-small']) {
-                $baseDiv.classList.add('ebcGrid-col-xs-' + $attr['col-small'].value);
+                $baseDiv.classList.add(CSS_MAP['col-small'] + $attr['col-small'].value);
             }
 
             if ($attr['col-large']) {
-                $baseDiv.classList.add('ebcGrid-col-md-' + $attr['col-large'].value)
+                $baseDiv.classList.add(CSS_MAP['col-large'] + $attr['col-large'].value)
             }
 
         // ### Aligning
@@ -45,9 +53,9 @@
 
                 var contentY = attrArray[1] || '';
 
-                $baseDiv.classList.add('ebcGrid-contentX-xs-' + contentX);
+                $baseDiv.classList.add(CSS_MAP['align-x'] + contentX);
 
-                $baseDiv.classList.add('ebcGrid-contentY-xs-' + contentY);
+                $baseDiv.classList.add(CSS_MAP['align-y'] + contentY);
 
             }
 
@@ -70,7 +78,7 @@
             var $contentDiv = document.createElement('div');
             $baseDiv.appendChild($contentDiv);
         } else {
-            $baseDiv.classList.add('ebcGrid-row');
+            $baseDiv.classList.add(CSS_MAP['row']);
             $contentDiv = $baseDiv;
         }
 
