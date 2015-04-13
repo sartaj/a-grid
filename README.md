@@ -1,18 +1,19 @@
-# eg-grid
+# Evergreen Grid (eg-grid)
 Simplified grid using Flexbox and native Web Components.
 
 ## Usage
 
 ```html
 	<html>
-		<script>
-		</script>
+		<head>
+			<script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script> <!-- No ShadowDOM needed -->
+			<link rel="import" href="src/eg-grid.html">
+		</head>
 		<eg-grid group>
 			<eg-grid small="2" medium="2" large="3">
 			<eg-grid small="2" >
 		</eg-grid>
 	</html>
-
 ```
 
 
