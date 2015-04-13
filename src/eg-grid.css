@@ -18,10 +18,6 @@
  *
 */
 
-eg-grid {
-  background: blue;
-}
-
 eg-grid.container-fluid {
   margin-right: auto;
   margin-left: auto;

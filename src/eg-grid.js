@@ -1,8 +1,8 @@
 (function(window, document, undefined) {
 
     var CSS_MAP = {
-        'col-small': 'col-xs-',
-        'col-large': 'col-md-',
+        'small': 'col-xs-',
+        'medium': 'col-md-',
         'align-x': 'contentX-xs-',
         'align-y': 'contentY-xs-',
         'row': 'row'
@@ -16,25 +16,19 @@
 
         // this is the current element
         // $baseDiv is the base element
-            var $baseDiv = document.createElement("div");
+            var $baseDiv = this;
 
         // Attributes on this will dictate the final $baseDiv element
             var $attr = this.attributes;
 
-
         // ## Gridding
 
-            // Have col default to col-small for mobile first purposes
-            if ($attr['col']) {
-                $attr['col-small'] = $attr['col'];
+            if ($attr['small']) {
+                $baseDiv.classList.add(CSS_MAP['small'] + $attr['small'].value);
             }
 
-            if ($attr['col-small']) {
-                $baseDiv.classList.add(CSS_MAP['col-small'] + $attr['col-small'].value);
-            }
-
-            if ($attr['col-large']) {
-                $baseDiv.classList.add(CSS_MAP['col-large'] + $attr['col-large'].value)
+            if ($attr['large']) {
+                $baseDiv.classList.add(CSS_MAP['large'] + $attr['large'].value)
             }
 
         // ### Aligning
@@ -59,22 +53,7 @@
 
             }
 
-        // Warn about $attr
-        var transferAttr = ['id', 'name'];
-
-        for (var x = 0; x < transferAttr.length; x++) {
-            var item = transferAttr[x];
-            if ($attr[item]) {
-                console.warn(this, "is using an illegal $attr. " + item + " not allowed." );
-            }
-        }
-
-        // TODO: Transfer classes
-        if (this.classList.length) {
-
-        }
-
-        if ($attr['col'] || $attr['col-small'] || $attr['col-large']) {
+        if ($attr['col'] || $attr['small'] || $attr['large']) {
             var $contentDiv = document.createElement('div');
             $baseDiv.appendChild($contentDiv);
         } else {
@@ -82,24 +61,22 @@
             $contentDiv = $baseDiv;
         }
 
+            // // Transfers child nodes between this and $baseDiv
+            // // source: http://stackoverflow.com/a/20910214/2026639
+            // while (this.childNodes.length > 0) {
+            //     $contentDiv.appendChild(this.childNodes[0]);
+            // }
 
+            // // Insert element after this element
+            // // source: http://stackoverflow.com/a/7258301/2026639
+            // if(this.parentNode) { // Hack because on the transfer above, some of these get re-run;
+            //     this.parentNode.insertBefore($baseDiv, this.nextSibling);
+            // }
 
-            // Transfers child nodes between this and $baseDiv
-            // source: http://stackoverflow.com/a/20910214/2026639
-            while (this.childNodes.length > 0) {
-                $contentDiv.appendChild(this.childNodes[0]);
-            }
+            // // $baseDiv.innerHTML = this.innerHTML;
 
-            // Insert element after this element
-            // source: http://stackoverflow.com/a/7258301/2026639
-            if(this.parentNode) { // Hack because on the transfer above, some of these get re-run;
-                this.parentNode.insertBefore($baseDiv, this.nextSibling);
-            }
-
-            // $baseDiv.innerHTML = this.innerHTML;
-
-            // Remove.
-            this.remove();
+            // // Remove.
+            // this.remove();
 
 
     };
