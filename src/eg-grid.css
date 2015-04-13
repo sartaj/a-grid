@@ -83,7 +83,7 @@ eg-grid[small="8"],
 eg-grid[small="9"],
 eg-grid[small="10"],
 eg-grid[small="11"],
-eg-grid[small="12"],
+eg-grid[small="12"]
 /* TODO: Do offsets */
 /*eg-grid[small=]-offset-1,
 eg-grid[small=]-offset-2,
@@ -330,7 +330,7 @@ eg-grid.last-xs {
   order: 1;
 }
 
-@media only screen and ( min-width: var( --screen-sm-min, 48em ) ) {
+@media only screen and ( min-width: 48em ) ) {
   eg-grid[group] {
     width: 46rem;
   }
@@ -347,7 +347,7 @@ eg-grid.last-xs {
   eg-grid[small="9"],
   eg-grid[small="10"],
   eg-grid[small="11"],
-  eg-grid[small="12"],
+  eg-grid[small="12"]
 /*  eg-grid.col-sm-offset-1,
   eg-grid.col-sm-offset-2,
   eg-grid.col-sm-offset-3,
@@ -611,7 +611,7 @@ eg-grid.last-xs {
   eg-grid[medium="9"],
   eg-grid[medium="10"],
   eg-grid[medium="11"],
-  eg-grid[medium="12"],
+  eg-grid[medium="12"]
 /*  eg-grid.col-md-offset-1,
   eg-grid.col-md-offset-2,
   eg-grid.col-md-offset-3,
@@ -878,8 +878,8 @@ eg-grid.last-xs {
   eg-grid[large="9"],
   eg-grid[large="10"],
   eg-grid[large="11"],
-  eg-grid[large="12"],
-  eg-grid.col-lg-offset-1,
+  eg-grid[large="12"]
+/*  eg-grid.col-lg-offset-1,
   eg-grid.col-lg-offset-2,
   eg-grid.col-lg-offset-3,
   eg-grid.col-lg-offset-4,
@@ -890,7 +890,8 @@ eg-grid.last-xs {
   eg-grid.col-lg-offset-9,
   eg-grid.col-lg-offset-10,
   eg-grid.col-lg-offset-11,
-  eg-grid.col-lg-offset-12 {
+  eg-grid.col-lg-offset-12 */
+  {
     box-sizing: border-box;
     display: -webkit-box;
     display: -webkit-flex;
