@@ -1,12 +1,12 @@
 {
-  "name": "a-grid",
+  "name": "eg-grid",
   "version": "0.0.1",
-  "homepage": "https://github.com/sartaj/a-grid",
+  "homepage": "https://github.com/sartaj/eg-grid",
   "authors": [
     "Sartaj"
   ],
   "description": "A simplified grid web component with no library dependencies",
-  "main": "a-grid.html",
+  "main": "eg-grid.html",
   "moduleType": [
     "amd",
     "es6",
