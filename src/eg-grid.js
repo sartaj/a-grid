@@ -1,4 +1,4 @@
-(function(window, document, undefined) {
+(function(window, document) {
 
     var CSS_MAP = {
         'small': 'col-xs-',
@@ -21,63 +21,15 @@
         // Attributes on this will dictate the final $baseDiv element
             var $attr = this.attributes;
 
-        // ## Gridding
+        // Add content div
 
-            if ($attr['small']) {
-                $baseDiv.classList.add(CSS_MAP['small'] + $attr['small'].value);
+            if ($attr['col'] || $attr['small'] || $attr['large']) {
+                var $contentDiv = document.createElement('div');
+                $baseDiv.appendChild($contentDiv);
+            } else {
+                $baseDiv.classList.add(CSS_MAP['row']);
+                $contentDiv = $baseDiv;
             }
-
-            if ($attr['large']) {
-                $baseDiv.classList.add(CSS_MAP['large'] + $attr['large'].value)
-            }
-
-        // ### Aligning
-
-            if ($attr['align']) {
-
-                // Expecting align to be either 1 or 2 space separated alignments
-                var attrArray = $attr['align'].value.split(" ");
-
-                // If only 1 alignment, make both X and Y the same
-                if (attrArray.length === 1) {
-                    attrArray.push(attrArray[0]);
-                }
-
-                var contentX = attrArray[0];
-
-                var contentY = attrArray[1] || '';
-
-                $baseDiv.classList.add(CSS_MAP['align-x'] + contentX);
-
-                $baseDiv.classList.add(CSS_MAP['align-y'] + contentY);
-
-            }
-
-        if ($attr['col'] || $attr['small'] || $attr['large']) {
-            var $contentDiv = document.createElement('div');
-            $baseDiv.appendChild($contentDiv);
-        } else {
-            $baseDiv.classList.add(CSS_MAP['row']);
-            $contentDiv = $baseDiv;
-        }
-
-            // // Transfers child nodes between this and $baseDiv
-            // // source: http://stackoverflow.com/a/20910214/2026639
-            // while (this.childNodes.length > 0) {
-            //     $contentDiv.appendChild(this.childNodes[0]);
-            // }
-
-            // // Insert element after this element
-            // // source: http://stackoverflow.com/a/7258301/2026639
-            // if(this.parentNode) { // Hack because on the transfer above, some of these get re-run;
-            //     this.parentNode.insertBefore($baseDiv, this.nextSibling);
-            // }
-
-            // // $baseDiv.innerHTML = this.innerHTML;
-
-            // // Remove.
-            // this.remove();
-
 
     };
 
