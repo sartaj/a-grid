@@ -18,16 +18,31 @@ Simplified grid using Flexbox and native Web Components.
 </html>
 ```
 
-## Design Goals
-1. Easy enough for beginner web developers to use.
-2. Performant enough for professional developers to use.
+## Designed for those who Value
+
+	1. Modularity
+	2. Ease of use
+	3. Performance
 
 ## Design Implementation
-1. The far majority of layout elements in this grid are done by native CSS. This allows for good performance.
-2. A light JS layer is added to simplify and remove extra divs usually needed in grids, like adding a content div to flexbox elements.
-3. A Grid debug dev environment library is available to provide for error handling and warnings for common pitfalls. This library isn't needed for production, leaving the production thin and performant.
 
-## Features
-* Flexbox Grid.
-* Native Web Component (no Polymer needed).
-* No Shadow DOM Polyfill needed.
+	* Only dictate structure, not skin. 
+		-> Modularity
+	* No major dependencies needed. 
+		-> Modularity 
+	* A grid debug dev environment library is available to provide for error handling and warnings for common pitfalls. This library isn't needed for distribution, leaving the production code thin and only doing non intensive calculations.
+		-> Modularity
+		-> Ease of use
+	* A light JS layer is added to simplify and remove extra divs usually needed in grids, like adding a content div to flexbox elements.
+		-> Ease of use
+	* The far majority of layout elements in this grid are done by native CSS. 
+		-> Performance
+	* Use evergreen browser specifications.
+		-> Performance
+		-> Ease of use
+
+## Packages
+
+	* Native Web Component 
+		* No Polymer + or ShadowDOM polyfill needed.
+			-> Performance
