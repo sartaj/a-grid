@@ -22,7 +22,7 @@ Simplified grid using Flexbox and native Web Components.
 1. Easy enough for beginner web developers to use.
 2. Performant enough for professional developers to use.
 
-## Implementation
+## Design Implementation
 1. The far majority of layout elements in this grid are done by native CSS. This allows for good performance.
 2. A light JS layer is added to simplify and remove extra divs usually needed in grids, like adding a content div to flexbox elements.
 3. A Grid debug dev environment library is available to provide for error handling and warnings for common pitfalls. This library isn't needed for production, leaving the production thin and performant.
