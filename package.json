@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/sartaj/eg-grid/issues"
   },
-  "homepage": "https://github.com/sartaj/eg-grid"
+  "homepage": "https://github.com/sartaj/eg-grid",
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-browserify": "^0.5.1",
+    "gulp-bump": "^0.3.0"
+  }
 }
