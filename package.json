@@ -1,7 +1,7 @@
 {
   "name": "eg-grid",
-  "version": "0.0.1",
-  "description": "A simplified grid web component with no library dependencies",
+  "version": "0.1.0",
+  "description": "A simplified grid web component that remains performant",
   "main": "index.js",
   "scripts": {
     "test": "gulp test"
@@ -19,6 +19,9 @@
   "devDependencies": {
     "gulp": "^3.8.11",
     "gulp-browserify": "^0.5.1",
-    "gulp-bump": "^0.3.0"
+    "gulp-bump": "^0.3.0",
+    "gulp-filter": "^2.0.2",
+    "gulp-git": "^1.1.1",
+    "gulp-tag-version": "^1.2.1"
   }
 }
