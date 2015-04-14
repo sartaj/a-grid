@@ -4,18 +4,18 @@ Simplified grid using Flexbox and native Web Components.
 ## Usage
 
 ```html
-	<html>
-		<head>
-			<script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script> <!-- No ShadowDOM needed -->
-			<link rel="import" href="src/eg-grid.html">
-		</head>
-		<body>
-			<eg-grid group>
-				<eg-grid small="2" medium="2" large="3"></eg-grid>
-				<eg-grid small="2" ></eg-grid>
-			</eg-grid>
-		</body>
-	</html>
+<html>
+	<head>
+		<script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script> <!-- No ShadowDOM needed -->
+		<link rel="import" href="bower_components/evergreen-grid/dist/eg-grid.html">
+	</head>
+	<body>
+		<eg-grid group>
+			<eg-grid small="2" medium="2" large="3"></eg-grid>
+			<eg-grid small="2" ></eg-grid>
+		</eg-grid>
+	</body>
+</html>
 ```
 
 ## Design Goals
@@ -28,20 +28,6 @@ Simplified grid using Flexbox and native Web Components.
 3. A Grid debug dev environment library is available to provide for error handling and warnings for common pitfalls. This library isn't needed for production, leaving the production thin and performant.
 
 ## Features
-* Flexbox Grid
-* Native Web Component (no Polymer needed)
-* No Shadow DOM Polyfill needed
-
-## Roadmap
-* Gulp
-* Versioning
-* Tests
-* Add to bower/npm
-* Error/debug hander
-* Auto div creation when needed 
-* Coverage
-* Debug
-* Add debug for common misuses of grid
-* Box Ordering
-* Box Offset
-* Viewport usage
+* Flexbox Grid.
+* Native Web Component (no Polymer needed).
+* No Shadow DOM Polyfill needed.
