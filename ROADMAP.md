@@ -1,0 +1,12 @@
+## 1. TASKS
+
+	* Tests
+	* Box Ordering
+	* Box Offset
+	* Coverage
+	* Add to bower/npm
+	* Error/debug hander
+	* Auto div creation when needed 
+	* Debug
+	* Add debug for common misuses of grid
+	* Viewport usage

@@ -1,6 +1,6 @@
 {
   "name": "eg-grid",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "A simplified grid web component that remains performant",
   "main": "index.js",
   "scripts": {
