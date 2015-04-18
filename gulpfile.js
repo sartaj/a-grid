@@ -63,7 +63,7 @@
       .pipe(gulp.dest('./'))
 
       // commit the changed version number 
-      // .pipe(git.commit('update version'))
+      .pipe(git.commit('update version'))
 
       // read only one file to get the version number 
       .pipe(filter('package.json'))
