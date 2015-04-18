@@ -26,7 +26,7 @@ Simplified grid using Flexbox and native Web Components.
 
 ## Design Implementation
 
-	* Only dictate structure, not skin. 
+	* Enforces OOCSS (Object Oriented CSS). Only dictates structure, not skin.
 		-> Modularity
 	* No major dependencies needed. 
 		-> Modularity 

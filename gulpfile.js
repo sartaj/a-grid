@@ -33,19 +33,17 @@
   function build() {
 
       // Single entry point to browserify 
-      gulp.src('src/eg-grid.js')
+      gulp.src('src/**/*.js')
           .pipe(browserify({
-            // insertGlobals : false,
-            // debug : true
           }))
           .pipe(uglify())
           .pipe(gulp.dest('./dist'));
 
-      gulp.src('src/eg-grid.html')
+      gulp.src('src/**/*.html')
           .pipe(minifyHTML())
           .pipe(gulp.dest('./dist'));
 
-      gulp.src('src/eg-grid.css')
+      gulp.src('src/**/*.css')
           .pipe(minifyCSS())
           .pipe(gulp.dest('./dist'));
 

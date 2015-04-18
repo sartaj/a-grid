@@ -1,16 +1,16 @@
-// var CSS_MAP = {
-//     'small': 'col-xs-',
-//     'medium': 'col-md-',
-//     'align-x': 'contentX-xs-',
-//     'align-y': 'contentY-xs-',
-//     'row': 'row'
-// };
-
 // Creates an object based in the HTML Element prototype
 var MyElementProto = Object.create(HTMLElement.prototype);
 
+MyElementProto.CSS_MAP = {
+    'small': 'col-xs-',
+    'medium': 'col-md-',
+    'align-x': 'contentX-xs-',
+    'align-y': 'contentY-xs-',
+    'row': 'row'
+};
+
 // Fires when an instance of the element is created
-MyElementProto.attachedCallback = function() {
+MyElementProto.createdCallback = function() {
 
     // this is the current element
     // $baseDiv is the base element
@@ -25,13 +25,13 @@ MyElementProto.attachedCallback = function() {
             var $contentDiv = document.createElement('div');
             $baseDiv.appendChild($contentDiv);
         } else {
-            $baseDiv.classList.add(CSS_MAP['row']);
+            $baseDiv.classList.add(this.CSS_MAP['row']);
             $contentDiv = $baseDiv;
         }
 
 };
 
 // Registers element in the main document
-document.registerElement('eg-grid', {
+document.registerElement('eg-structure', {
     prototype: MyElementProto
 });
