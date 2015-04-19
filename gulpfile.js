@@ -47,12 +47,12 @@
       .pipe(minifyCSS())
       .pipe(gulp.dest('./dist'));
 
-    gulp.src('./dist/eg-structure.html')
-      .pipe(vulcanize({
-          inlineScripts: true
-      }))
-      // .pipe(concat('eg-structure.html'))
-      .pipe(gulp.dest('./dist'));
+    // gulp.src('./dist/eg-structure.html')
+    //   .pipe(vulcanize({
+    //       inlineScripts: true
+    //   }))
+    //   // .pipe(concat('eg-structure.html'))
+    //   .pipe(gulp.dest('./dist'));
 
   }
 
