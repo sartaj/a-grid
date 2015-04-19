@@ -5,11 +5,13 @@
   var gulp = require('gulp');
 
   // Transforms
-  
+
   var browserify = require('gulp-browserify'),
       uglify = require('gulp-uglify'),
       minifyHTML = require('gulp-minify-html'),
-      minifyCSS = require('gulp-minify-css');
+      minifyCSS = require('gulp-minify-css'),
+      vulcanize = require('gulp-vulcanize'),
+      concat = require('gulp-concat');
 
   // Release
   
@@ -17,7 +19,6 @@
       bump = require('gulp-bump'),
       filter = require('gulp-filter'),
       tag_version = require('gulp-tag-version');
-
 
 // Tasks
 
@@ -32,20 +33,26 @@
 
   function build() {
 
-      // Single entry point to browserify 
-      gulp.src('src/**/*.js')
-          .pipe(browserify({
-          }))
-          .pipe(uglify())
-          .pipe(gulp.dest('./dist'));
+    // Single entry point to browserify 
+    gulp.src('src/**/*.js')
+      .pipe(browserify())
+      .pipe(uglify())
+      .pipe(gulp.dest('./dist'));
 
-      gulp.src('src/**/*.html')
-          .pipe(minifyHTML())
-          .pipe(gulp.dest('./dist'));
+    gulp.src('src/**/*.html')
+      .pipe(minifyHTML())
+      .pipe(gulp.dest('./dist'));
 
-      gulp.src('src/**/*.css')
-          .pipe(minifyCSS())
-          .pipe(gulp.dest('./dist'));
+    gulp.src('src/**/*.css')
+      .pipe(minifyCSS())
+      .pipe(gulp.dest('./dist'));
+
+    gulp.src('./dist/eg-structure.html')
+      .pipe(vulcanize({
+          inlineScripts: true
+      }))
+      // .pipe(concat('eg-structure.html'))
+      .pipe(gulp.dest('./dist'));
 
   }
 
