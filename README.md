@@ -27,19 +27,19 @@ Simplified grid using Flexbox and native Web Components.
 ## Design Implementation
 
 	* Enforces OOCSS (Object Oriented CSS). Only dictates structure, not skin.
-		-> Modularity
+		# Modularity
 	* No major dependencies needed. 
-		-> Modularity 
+		# Modularity 
 	* A grid debug dev environment library is available to provide for error handling and warnings for common pitfalls. This library isn't needed for distribution, leaving the production code thin and only doing non intensive calculations.
-		-> Modularity
-		-> Ease of use
+		# Modularity
+		# Ease of use
 	* A light JS layer is added to simplify and remove extra divs usually needed in grids, like adding a content div to flexbox elements.
-		-> Ease of use
+		# Ease of use
 	* The far majority of layout elements in this grid are done by native CSS. 
-		-> Performance
+		# Performance
 	* Use evergreen browser specifications.
-		-> Performance
-		-> Ease of use
+		# Performance
+		# Ease of use
 
 ## Packages
 
