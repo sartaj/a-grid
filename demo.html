@@ -11,32 +11,32 @@
     Structure
 
       • structure-viewport is based on size of the screen
-      • structure-context based on 12 columns or a percentage
+      • structure-fluid based on 12 columns or a percentage
       • structure-fixed is something that is fixed on the screen (i.e. stays visible while scrolling)
 
       NOTE: small-medium-large 
       small - mobile
       medium - tablet
       large - desktop
-d
+
  -->
 
 <body structure-viewport>
-    <structure-viewport width="20" height="100">
+    <structure-viewport width="20" height="100" style="background:blue" >
         <your-sidebar></your-sidebar>
     </structure-viewport>
-    <structure-viewport width="80">
-        <structure-context >
-            <structure-context small-width="1/12" medium="6" style="background: green" align-x="center" align-y="center">
+    <structure-viewport width="80" style="background:red">
+        <structure-fluid >
+            <structure-fluid small-width="1/12" medium="6" style="background: green" align-x="center" align-y="center">
                 Evergreen
-            </structure-context>
-            <structure-context small="12" medium="6" style="background:blue">
-                context
-            </structure-context>
-            <structure-context small="3" style="background:green">
+            </structure-fluid>
+            <structure-fluid small="12" medium="6" style="background:blue">
+                fluid
+            </structure-fluid>
+            <structure-fluid small="3" style="background:green">
                 Blue
-            </structure-context>
-        </structure-context>
+            </structure-fluid>
+        </structure-fluid>
     </structure-viewport>
 </body>
 

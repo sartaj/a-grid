@@ -20,18 +20,18 @@
 
 /* TODO: use var() everywhere */
 
-eg-grid[container-fluid] {
+structure-fluid[container-fluid] {
   margin-right: auto;
   margin-left: auto;
 /*  padding-right: 2rem;
   padding-left: 2rem;*/
 }
 
-eg-grid[fullscreen] {
+structure-fluid[fullscreen] {
   min-height: 100%;
 }
 
-eg-grid[group] {
+structure-fluid[group] {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -49,7 +49,7 @@ eg-grid[group] {
   margin-left: -0.5rem;*/
 }
 
-eg-grid[group][reverse] {
+structure-fluid[group][reverse] {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
   -webkit-flex-direction: row-reverse;
@@ -60,7 +60,7 @@ eg-grid[group][reverse] {
   flex-wrap: row-reverse;
 }
 
-eg-grid[reverse]:not([group]) {
+structure-fluid[reverse]:not([group]) {
   -webkit-box-orient: vertical;
   -webkit-box-direction: reverse;
   -webkit-flex-direction: column-reverse;
@@ -71,32 +71,32 @@ eg-grid[reverse]:not([group]) {
   flex-wrap: column-reverse;
 }
 
-eg-grid[small],
-eg-grid[small="1"],
-eg-grid[small="2"],
-eg-grid[small="3"],
-eg-grid[small="4"],
-eg-grid[small="5"],
-eg-grid[small="6"],
-eg-grid[small="7"],
-eg-grid[small="8"],
-eg-grid[small="9"],
-eg-grid[small="10"],
-eg-grid[small="11"],
-eg-grid[small="12"]
+structure-fluid[small],
+structure-fluid[small="1"],
+structure-fluid[small="2"],
+structure-fluid[small="3"],
+structure-fluid[small="4"],
+structure-fluid[small="5"],
+structure-fluid[small="6"],
+structure-fluid[small="7"],
+structure-fluid[small="8"],
+structure-fluid[small="9"],
+structure-fluid[small="10"],
+structure-fluid[small="11"],
+structure-fluid[small="12"]
 /* TODO: Do offsets */
-/*eg-grid[small=]-offset-1,
-eg-grid[small=]-offset-2,
-eg-grid[small=]-offset-3,
-eg-grid[small=]-offset-4,
-eg-grid[small=]-offset-5,
-eg-grid[small=]-offset-6,
-eg-grid[small=]-offset-7,
-eg-grid[small=]-offset-8,
-eg-grid[small=]-offset-9,
-eg-grid[small=]-offset-10,*/
-/*eg-grid[small=]-offset-11,
-eg-grid[small=]-offset-12 */
+/*structure-fluid[small=]-offset-1,
+structure-fluid[small=]-offset-2,
+structure-fluid[small=]-offset-3,
+structure-fluid[small=]-offset-4,
+structure-fluid[small=]-offset-5,
+structure-fluid[small=]-offset-6,
+structure-fluid[small=]-offset-7,
+structure-fluid[small=]-offset-8,
+structure-fluid[small=]-offset-9,
+structure-fluid[small=]-offset-10,*/
+/*structure-fluid[small=]-offset-11,
+structure-fluid[small=]-offset-12 */
 {
   box-sizing: border-box;
   display: -webkit-box;
@@ -119,7 +119,7 @@ eg-grid[small=]-offset-12 */
   padding-left: 0rem;
 }
 
-eg-grid[small] {
+structure-fluid[small] {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -130,135 +130,135 @@ eg-grid[small] {
   max-width: 100%;
 }
 
-eg-grid[small="1"] {
+structure-fluid[small="1"] {
   -webkit-flex-basis: 8.333333333%;
   -ms-flex-preferred-size: 8.333333333%;
   flex-basis: 8.333333333%;
   max-width: 8.333333333%;
 }
 
-eg-grid[small="2"] {
+structure-fluid[small="2"] {
   -webkit-flex-basis: 16.666666667%;
   -ms-flex-preferred-size: 16.666666667%;
   flex-basis: 16.666666667%;
   max-width: 16.666666667%;
 }
 
-eg-grid[small="3"] {
+structure-fluid[small="3"] {
   -webkit-flex-basis: 25%;
   -ms-flex-preferred-size: 25%;
   flex-basis: 25%;
   max-width: 25%;
 }
 
-eg-grid[small="4"] {
+structure-fluid[small="4"] {
   -webkit-flex-basis: 33.333333333%;
   -ms-flex-preferred-size: 33.333333333%;
   flex-basis: 33.333333333%;
   max-width: 33.333333333%;
 }
 
-eg-grid[small="5"] {
+structure-fluid[small="5"] {
   -webkit-flex-basis: 41.666666667%;
   -ms-flex-preferred-size: 41.666666667%;
   flex-basis: 41.666666667%;
   max-width: 41.666666667%;
 }
 
-eg-grid[small="6"] {
+structure-fluid[small="6"] {
   -webkit-flex-basis: 50%;
   -ms-flex-preferred-size: 50%;
   flex-basis: 50%;
   max-width: 50%;
 }
 
-eg-grid[small="7"] {
+structure-fluid[small="7"] {
   -webkit-flex-basis: 58.333333333%;
   -ms-flex-preferred-size: 58.333333333%;
   flex-basis: 58.333333333%;
   max-width: 58.333333333%;
 }
 
-eg-grid[small="8"] {
+structure-fluid[small="8"] {
   -webkit-flex-basis: 66.666666667%;
   -ms-flex-preferred-size: 66.666666667%;
   flex-basis: 66.666666667%;
   max-width: 66.666666667%;
 }
 
-eg-grid[small="9"] {
+structure-fluid[small="9"] {
   -webkit-flex-basis: 75%;
   -ms-flex-preferred-size: 75%;
   flex-basis: 75%;
   max-width: 75%;
 }
 
-eg-grid[small="10"] {
+structure-fluid[small="10"] {
   -webkit-flex-basis: 83.333333333%;
   -ms-flex-preferred-size: 83.333333333%;
   flex-basis: 83.333333333%;
   max-width: 83.333333333%;
 }
 
-eg-grid[small="11"] {
+structure-fluid[small="11"] {
   -webkit-flex-basis: 91.666666667%;
   -ms-flex-preferred-size: 91.666666667%;
   flex-basis: 91.666666667%;
   max-width: 91.666666667%;
 }
 
-eg-grid[small="12"] {
+structure-fluid[small="12"] {
   -webkit-flex-basis: 100%;
   -ms-flex-preferred-size: 100%;
   flex-basis: 100%;
   max-width: 100%;
 }
 
-/*eg-grid[small=]-offset-1 {
+/*structure-fluid[small=]-offset-1 {
   margin-left: 8.333333333%;
 }
 
-eg-grid[small=]-offset-2 {
+structure-fluid[small=]-offset-2 {
   margin-left: 16.666666667%;
 }
 
-eg-grid[small=]-offset-3 {
+structure-fluid[small=]-offset-3 {
   margin-left: 25%;
 }
 
-eg-grid[small=]-offset-4 {
+structure-fluid[small=]-offset-4 {
   margin-left: 33.333333333%;
 }
 
-eg-grid[small=]-offset-5 {
+structure-fluid[small=]-offset-5 {
   margin-left: 41.666666667%;
 }
 
-eg-grid[small=]-offset-6 {
+structure-fluid[small=]-offset-6 {
   margin-left: 50%;
 }
 
-eg-grid[small=]-offset-7 {
+structure-fluid[small=]-offset-7 {
   margin-left: 58.333333333%;
 }
 
-eg-grid[small=]-offset-8 {
+structure-fluid[small=]-offset-8 {
   margin-left: 66.666666667%;
 }
 
-eg-grid[small=]-offset-9 {
+structure-fluid[small=]-offset-9 {
   margin-left: 75%;
 }
 
-eg-grid[small=]-offset-10 {
+structure-fluid[small=]-offset-10 {
   margin-left: 83.333333333%;
 }
 
-eg-grid[small=]-offset-11 {
+structure-fluid[small=]-offset-11 {
   margin-left: 91.666666667%;
 }*/
 
-/*eg-grid.start-xs {
+/*structure-fluid.start-xs {
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
@@ -266,7 +266,7 @@ eg-grid[small=]-offset-11 {
   text-align: start;
 }*/
 
-eg-grid[align-x="center"][align-y="center"] {
+structure-fluid[align-x="center"][align-y="center"] {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -274,7 +274,7 @@ eg-grid[align-x="center"][align-y="center"] {
 /*  text-align: center;*/
 }
 
-eg-grid.end-xs {
+structure-fluid.end-xs {
   -webkit-box-pack: end;
   -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
@@ -282,48 +282,48 @@ eg-grid.end-xs {
   text-align: end;
 }
 
-eg-grid.top-xs {
+structure-fluid.top-xs {
   -webkit-box-align: start;
   -webkit-align-items: flex-start;
   -ms-flex-align: start;
   align-items: flex-start;
 }
 
-eg-grid[align-y="center"] {
+structure-fluid[align-y="center"] {
   -webkit-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
 }
 
-eg-grid.bottom-xs {
+structure-fluid.bottom-xs {
   -webkit-box-align: end;
   -webkit-align-items: flex-end;
   -ms-flex-align: end;
   align-items: flex-end;
 }
 
-eg-grid.around-xs {
+structure-fluid.around-xs {
   -webkit-justify-content: space-around;
   -ms-flex-pack: distribute;
   justify-content: space-around;
 }
 
-eg-grid.between-xs {
+structure-fluid.between-xs {
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
-eg-grid.first-xs {
+structure-fluid.first-xs {
   -webkit-box-ordinal-group: 0;
   -webkit-order: -1;
   -ms-flex-order: -1;
   order: -1;
 }
 
-eg-grid.last-xs {
+structure-fluid.last-xs {
   -webkit-box-ordinal-group: 2;
   -webkit-order: 1;
   -ms-flex-order: 1;
@@ -331,35 +331,35 @@ eg-grid.last-xs {
 }
 
 @media only screen and ( min-width: 48em ) ) {
-  eg-grid[group] {
+  structure-fluid[group] {
     width: 46rem;
   }
 
-  eg-grid[small],
-  eg-grid[small="1"],
-  eg-grid[small="2"],
-  eg-grid[small="3"],
-  eg-grid[small="4"],
-  eg-grid[small="5"],
-  eg-grid[small="6"],
-  eg-grid[small="7"],
-  eg-grid[small="8"],
-  eg-grid[small="9"],
-  eg-grid[small="10"],
-  eg-grid[small="11"],
-  eg-grid[small="12"]
-/*  eg-grid.col-sm-offset-1,
-  eg-grid.col-sm-offset-2,
-  eg-grid.col-sm-offset-3,
-  eg-grid.col-sm-offset-4,
-  eg-grid.col-sm-offset-5,
-  eg-grid.col-sm-offset-6,
-  eg-grid.col-sm-offset-7,
-  eg-grid.col-sm-offset-8,
-  eg-grid.col-sm-offset-9,
-  eg-grid.col-sm-offset-10,
-  eg-grid.col-sm-offset-11,
-  eg-grid.col-sm-offset-12 */
+  structure-fluid[small],
+  structure-fluid[small="1"],
+  structure-fluid[small="2"],
+  structure-fluid[small="3"],
+  structure-fluid[small="4"],
+  structure-fluid[small="5"],
+  structure-fluid[small="6"],
+  structure-fluid[small="7"],
+  structure-fluid[small="8"],
+  structure-fluid[small="9"],
+  structure-fluid[small="10"],
+  structure-fluid[small="11"],
+  structure-fluid[small="12"]
+/*  structure-fluid.col-sm-offset-1,
+  structure-fluid.col-sm-offset-2,
+  structure-fluid.col-sm-offset-3,
+  structure-fluid.col-sm-offset-4,
+  structure-fluid.col-sm-offset-5,
+  structure-fluid.col-sm-offset-6,
+  structure-fluid.col-sm-offset-7,
+  structure-fluid.col-sm-offset-8,
+  structure-fluid.col-sm-offset-9,
+  structure-fluid.col-sm-offset-10,
+  structure-fluid.col-sm-offset-11,
+  structure-fluid.col-sm-offset-12 */
   {
     box-sizing: border-box;
     display: -webkit-box;
@@ -382,7 +382,7 @@ eg-grid.last-xs {
     padding-left: 0rem;
   }
 
-  eg-grid[small]{
+  structure-fluid[small]{
     -webkit-box-flex: 1;
     -webkit-flex-grow: 1;
     -ms-flex-positive: 1;
@@ -393,135 +393,135 @@ eg-grid.last-xs {
     max-width: 100%;
   }
 
-  eg-grid[small="1"] {
+  structure-fluid[small="1"] {
     -webkit-flex-basis: 8.333333333%;
     -ms-flex-preferred-size: 8.333333333%;
     flex-basis: 8.333333333%;
     max-width: 8.333333333%;
   }
 
-  eg-grid[small="2"] {
+  structure-fluid[small="2"] {
     -webkit-flex-basis: 16.666666667%;
     -ms-flex-preferred-size: 16.666666667%;
     flex-basis: 16.666666667%;
     max-width: 16.666666667%;
   }
 
-  eg-grid[small="3"] {
+  structure-fluid[small="3"] {
     -webkit-flex-basis: 25%;
     -ms-flex-preferred-size: 25%;
     flex-basis: 25%;
     max-width: 25%;
   }
 
-  eg-grid[small="4"] {
+  structure-fluid[small="4"] {
     -webkit-flex-basis: 33.333333333%;
     -ms-flex-preferred-size: 33.333333333%;
     flex-basis: 33.333333333%;
     max-width: 33.333333333%;
   }
 
-  eg-grid[small="5"] {
+  structure-fluid[small="5"] {
     -webkit-flex-basis: 41.666666667%;
     -ms-flex-preferred-size: 41.666666667%;
     flex-basis: 41.666666667%;
     max-width: 41.666666667%;
   }
 
-  eg-grid[small="6"] {
+  structure-fluid[small="6"] {
     -webkit-flex-basis: 50%;
     -ms-flex-preferred-size: 50%;
     flex-basis: 50%;
     max-width: 50%;
   }
 
-  eg-grid[small="7"] {
+  structure-fluid[small="7"] {
     -webkit-flex-basis: 58.333333333%;
     -ms-flex-preferred-size: 58.333333333%;
     flex-basis: 58.333333333%;
     max-width: 58.333333333%;
   }
 
-  eg-grid[small="8"] {
+  structure-fluid[small="8"] {
     -webkit-flex-basis: 66.666666667%;
     -ms-flex-preferred-size: 66.666666667%;
     flex-basis: 66.666666667%;
     max-width: 66.666666667%;
   }
 
-  eg-grid[small="9"] {
+  structure-fluid[small="9"] {
     -webkit-flex-basis: 75%;
     -ms-flex-preferred-size: 75%;
     flex-basis: 75%;
     max-width: 75%;
   }
 
-  eg-grid[small="10"] {
+  structure-fluid[small="10"] {
     -webkit-flex-basis: 83.333333333%;
     -ms-flex-preferred-size: 83.333333333%;
     flex-basis: 83.333333333%;
     max-width: 83.333333333%;
   }
 
-  eg-grid[small="11"] {
+  structure-fluid[small="11"] {
     -webkit-flex-basis: 91.666666667%;
     -ms-flex-preferred-size: 91.666666667%;
     flex-basis: 91.666666667%;
     max-width: 91.666666667%;
   }
 
-  eg-grid[small="12"] {
+  structure-fluid[small="12"] {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     max-width: 100%;
   }
 /*
-  eg-grid.col-sm-offset-1 {
+  structure-fluid.col-sm-offset-1 {
     margin-left: 8.333333333%;
   }
 
-  eg-grid.col-sm-offset-2 {
+  structure-fluid.col-sm-offset-2 {
     margin-left: 16.666666667%;
   }
 
-  eg-grid.col-sm-offset-3 {
+  structure-fluid.col-sm-offset-3 {
     margin-left: 25%;
   }
 
-  eg-grid.col-sm-offset-4 {
+  structure-fluid.col-sm-offset-4 {
     margin-left: 33.333333333%;
   }
 
-  eg-grid.col-sm-offset-5 {
+  structure-fluid.col-sm-offset-5 {
     margin-left: 41.666666667%;
   }
 
-  eg-grid.col-sm-offset-6 {
+  structure-fluid.col-sm-offset-6 {
     margin-left: 50%;
   }
 
-  eg-grid.col-sm-offset-7 {
+  structure-fluid.col-sm-offset-7 {
     margin-left: 58.333333333%;
   }
 
-  eg-grid.col-sm-offset-8 {
+  structure-fluid.col-sm-offset-8 {
     margin-left: 66.666666667%;
   }
 
-  eg-grid.col-sm-offset-9 {
+  structure-fluid.col-sm-offset-9 {
     margin-left: 75%;
   }
 
-  eg-grid.col-sm-offset-10 {
+  structure-fluid.col-sm-offset-10 {
     margin-left: 83.333333333%;
   }
 
-  eg-grid.col-sm-offset-11 {
+  structure-fluid.col-sm-offset-11 {
     margin-left: 91.666666667%;
   } */
 
-  eg-grid.start-sm {
+  structure-fluid.start-sm {
     -webkit-box-pack: start;
     -webkit-justify-content: flex-start;
     -ms-flex-pack: start;
@@ -529,7 +529,7 @@ eg-grid.last-xs {
     text-align: start;
   }
 
-  eg-grid.center-sm {
+  structure-fluid.center-sm {
     -webkit-box-pack: center;
     -webkit-justify-content: center;
     -ms-flex-pack: center;
@@ -537,7 +537,7 @@ eg-grid.last-xs {
     text-align: center;
   }
 
-  eg-grid.end-sm {
+  structure-fluid.end-sm {
     -webkit-box-pack: end;
     -webkit-justify-content: flex-end;
     -ms-flex-pack: end;
@@ -545,48 +545,48 @@ eg-grid.last-xs {
     text-align: end;
   }
 
-  eg-grid.top-sm {
+  structure-fluid.top-sm {
     -webkit-box-align: start;
     -webkit-align-items: flex-start;
     -ms-flex-align: start;
     align-items: flex-start;
   }
 
-  eg-grid.middle-sm {
+  structure-fluid.middle-sm {
     -webkit-box-align: center;
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
   }
 
-  eg-grid.bottom-sm {
+  structure-fluid.bottom-sm {
     -webkit-box-align: end;
     -webkit-align-items: flex-end;
     -ms-flex-align: end;
     align-items: flex-end;
   }
 
-  eg-grid.around-sm {
+  structure-fluid.around-sm {
     -webkit-justify-content: space-around;
     -ms-flex-pack: distribute;
     justify-content: space-around;
   }
 
-  eg-grid.between-sm {
+  structure-fluid.between-sm {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
     justify-content: space-between;
   }
 
-  eg-grid.first-sm {
+  structure-fluid.first-sm {
     -webkit-box-ordinal-group: 0;
     -webkit-order: -1;
     -ms-flex-order: -1;
     order: -1;
   }
 
-  eg-grid.last-sm {
+  structure-fluid.last-sm {
     -webkit-box-ordinal-group: 2;
     -webkit-order: 1;
     -ms-flex-order: 1;
@@ -595,35 +595,35 @@ eg-grid.last-xs {
 }
 
 @media only screen and ( min-width: 62em ) {
-  eg-grid.container {
+  structure-fluid.container {
     width: 61rem;
   }
 
-  eg-grid[medium],
-  eg-grid[medium="1"],
-  eg-grid[medium="2"],
-  eg-grid[medium="3"],
-  eg-grid[medium="4"],
-  eg-grid[medium="5"],
-  eg-grid[medium="6"],
-  eg-grid[medium="7"],
-  eg-grid[medium="8"],
-  eg-grid[medium="9"],
-  eg-grid[medium="10"],
-  eg-grid[medium="11"],
-  eg-grid[medium="12"]
-/*  eg-grid.col-md-offset-1,
-  eg-grid.col-md-offset-2,
-  eg-grid.col-md-offset-3,
-  eg-grid.col-md-offset-4,
-  eg-grid.col-md-offset-5,
-  eg-grid.col-md-offset-6,
-  eg-grid.col-md-offset-7,
-  eg-grid.col-md-offset-8,
-  eg-grid.col-md-offset-9,
-  eg-grid.col-md-offset-10,
-  eg-grid.col-md-offset-11,
-  eg-grid.col-md-offset-12*/ 
+  structure-fluid[medium],
+  structure-fluid[medium="1"],
+  structure-fluid[medium="2"],
+  structure-fluid[medium="3"],
+  structure-fluid[medium="4"],
+  structure-fluid[medium="5"],
+  structure-fluid[medium="6"],
+  structure-fluid[medium="7"],
+  structure-fluid[medium="8"],
+  structure-fluid[medium="9"],
+  structure-fluid[medium="10"],
+  structure-fluid[medium="11"],
+  structure-fluid[medium="12"]
+/*  structure-fluid.col-md-offset-1,
+  structure-fluid.col-md-offset-2,
+  structure-fluid.col-md-offset-3,
+  structure-fluid.col-md-offset-4,
+  structure-fluid.col-md-offset-5,
+  structure-fluid.col-md-offset-6,
+  structure-fluid.col-md-offset-7,
+  structure-fluid.col-md-offset-8,
+  structure-fluid.col-md-offset-9,
+  structure-fluid.col-md-offset-10,
+  structure-fluid.col-md-offset-11,
+  structure-fluid.col-md-offset-12*/ 
   {
     box-sizing: border-box;
     display: -webkit-box;
@@ -647,7 +647,7 @@ eg-grid.last-xs {
   }
 
 
-  eg-grid[medium]{
+  structure-fluid[medium]{
     -webkit-box-flex: 1;
     -webkit-flex-grow: 1;
     -ms-flex-positive: 1;
@@ -658,84 +658,84 @@ eg-grid.last-xs {
     max-width: 100%;
   }
 
-  eg-grid[medium="1"] {
+  structure-fluid[medium="1"] {
     -webkit-flex-basis: 8.333333333%;
     -ms-flex-preferred-size: 8.333333333%;
     flex-basis: 8.333333333%;
     max-width: 8.333333333%;
   }
 
-  eg-grid[medium="2"] {
+  structure-fluid[medium="2"] {
     -webkit-flex-basis: 16.666666667%;
     -ms-flex-preferred-size: 16.666666667%;
     flex-basis: 16.666666667%;
     max-width: 16.666666667%;
   }
 
-  eg-grid[medium="3"] {
+  structure-fluid[medium="3"] {
     -webkit-flex-basis: 25%;
     -ms-flex-preferred-size: 25%;
     flex-basis: 25%;
     max-width: 25%;
   }
 
-  eg-grid[medium="4"] {
+  structure-fluid[medium="4"] {
     -webkit-flex-basis: 33.333333333%;
     -ms-flex-preferred-size: 33.333333333%;
     flex-basis: 33.333333333%;
     max-width: 33.333333333%;
   }
 
-  eg-grid[medium="5"] {
+  structure-fluid[medium="5"] {
     -webkit-flex-basis: 41.666666667%;
     -ms-flex-preferred-size: 41.666666667%;
     flex-basis: 41.666666667%;
     max-width: 41.666666667%;
   }
 
-  eg-grid[medium="6"] {
+  structure-fluid[medium="6"] {
     -webkit-flex-basis: 50%;
     -ms-flex-preferred-size: 50%;
     flex-basis: 50%;
     max-width: 50%;
   }
 
-  eg-grid[medium="7"] {
+  structure-fluid[medium="7"] {
     -webkit-flex-basis: 58.333333333%;
     -ms-flex-preferred-size: 58.333333333%;
     flex-basis: 58.333333333%;
     max-width: 58.333333333%;
   }
 
-  eg-grid[medium="8"] {
+  structure-fluid[medium="8"] {
     -webkit-flex-basis: 66.666666667%;
     -ms-flex-preferred-size: 66.666666667%;
     flex-basis: 66.666666667%;
     max-width: 66.666666667%;
   }
 
-  eg-grid[medium="9"] {
+  structure-fluid[medium="9"] {
     -webkit-flex-basis: 75%;
     -ms-flex-preferred-size: 75%;
     flex-basis: 75%;
     max-width: 75%;
   }
 
-  eg-grid[medium="10"] {
+  structure-fluid[medium="10"] {
     -webkit-flex-basis: 83.333333333%;
     -ms-flex-preferred-size: 83.333333333%;
     flex-basis: 83.333333333%;
     max-width: 83.333333333%;
   }
 
-  eg-grid[medium="11"] {
+  structure-fluid[medium="11"] {
     -webkit-flex-basis: 91.666666667%;
     -ms-flex-preferred-size: 91.666666667%;
     flex-basis: 91.666666667%;
     max-width: 91.666666667%;
   }
 
-  eg-grid[medium="12"] {
+  structure-fluid[medium="12"] {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -743,51 +743,51 @@ eg-grid.last-xs {
   }
 
 
-  eg-grid.col-md-offset-1 {
+  structure-fluid.col-md-offset-1 {
     margin-left: 8.333333333%;
   }
 
-  eg-grid.col-md-offset-2 {
+  structure-fluid.col-md-offset-2 {
     margin-left: 16.666666667%;
   }
 
-  eg-grid.col-md-offset-3 {
+  structure-fluid.col-md-offset-3 {
     margin-left: 25%;
   }
 
-  eg-grid.col-md-offset-4 {
+  structure-fluid.col-md-offset-4 {
     margin-left: 33.333333333%;
   }
 
-  eg-grid.col-md-offset-5 {
+  structure-fluid.col-md-offset-5 {
     margin-left: 41.666666667%;
   }
 
-  eg-grid.col-md-offset-6 {
+  structure-fluid.col-md-offset-6 {
     margin-left: 50%;
   }
 
-  eg-grid.col-md-offset-7 {
+  structure-fluid.col-md-offset-7 {
     margin-left: 58.333333333%;
   }
 
-  eg-grid.col-md-offset-8 {
+  structure-fluid.col-md-offset-8 {
     margin-left: 66.666666667%;
   }
 
-  eg-grid.col-md-offset-9 {
+  structure-fluid.col-md-offset-9 {
     margin-left: 75%;
   }
 
-  eg-grid.col-md-offset-10 {
+  structure-fluid.col-md-offset-10 {
     margin-left: 83.333333333%;
   }
 
-  eg-grid.col-md-offset-11 {
+  structure-fluid.col-md-offset-11 {
     margin-left: 91.666666667%;
   }
 
-  eg-grid.start-md {
+  structure-fluid.start-md {
     -webkit-box-pack: start;
     -webkit-justify-content: flex-start;
     -ms-flex-pack: start;
@@ -795,7 +795,7 @@ eg-grid.last-xs {
     text-align: start;
   }
 
-  eg-grid.center-md {
+  structure-fluid.center-md {
     -webkit-box-pack: center;
     -webkit-justify-content: center;
     -ms-flex-pack: center;
@@ -803,7 +803,7 @@ eg-grid.last-xs {
     text-align: center;
   }
 
-  eg-grid.end-md {
+  structure-fluid.end-md {
     -webkit-box-pack: end;
     -webkit-justify-content: flex-end;
     -ms-flex-pack: end;
@@ -811,48 +811,48 @@ eg-grid.last-xs {
     text-align: end;
   }
 
-  eg-grid.top-md {
+  structure-fluid.top-md {
     -webkit-box-align: start;
     -webkit-align-items: flex-start;
     -ms-flex-align: start;
     align-items: flex-start;
   }
 
-  eg-grid.middle-md {
+  structure-fluid.middle-md {
     -webkit-box-align: center;
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
   }
 
-  eg-grid.bottom-md {
+  structure-fluid.bottom-md {
     -webkit-box-align: end;
     -webkit-align-items: flex-end;
     -ms-flex-align: end;
     align-items: flex-end;
   }
 
-  eg-grid.around-md {
+  structure-fluid.around-md {
     -webkit-justify-content: space-around;
     -ms-flex-pack: distribute;
     justify-content: space-around;
   }
 
-  eg-grid.between-md {
+  structure-fluid.between-md {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
     justify-content: space-between;
   }
 
-  eg-grid.first-md {
+  structure-fluid.first-md {
     -webkit-box-ordinal-group: 0;
     -webkit-order: -1;
     -ms-flex-order: -1;
     order: -1;
   }
 
-  eg-grid.last-md {
+  structure-fluid.last-md {
     -webkit-box-ordinal-group: 2;
     -webkit-order: 1;
     -ms-flex-order: 1;
@@ -862,35 +862,35 @@ eg-grid.last-xs {
 
 /*@media only screen and ( min-width: var( --screen-lg-min, 75em ) ) {*/
 @media only screen and ( min-width: 75em ) ) {
-  eg-grid[group] {
+  structure-fluid[group] {
     width: 71rem;
   }
 
-  eg-grid[large],
-  eg-grid[large="1"],
-  eg-grid[large="2"],
-  eg-grid[large="3"],
-  eg-grid[large="4"],
-  eg-grid[large="5"],
-  eg-grid[large="6"],
-  eg-grid[large="7"],
-  eg-grid[large="8"],
-  eg-grid[large="9"],
-  eg-grid[large="10"],
-  eg-grid[large="11"],
-  eg-grid[large="12"]
-/*  eg-grid.col-lg-offset-1,
-  eg-grid.col-lg-offset-2,
-  eg-grid.col-lg-offset-3,
-  eg-grid.col-lg-offset-4,
-  eg-grid.col-lg-offset-5,
-  eg-grid.col-lg-offset-6,
-  eg-grid.col-lg-offset-7,
-  eg-grid.col-lg-offset-8,
-  eg-grid.col-lg-offset-9,
-  eg-grid.col-lg-offset-10,
-  eg-grid.col-lg-offset-11,
-  eg-grid.col-lg-offset-12 */
+  structure-fluid[large],
+  structure-fluid[large="1"],
+  structure-fluid[large="2"],
+  structure-fluid[large="3"],
+  structure-fluid[large="4"],
+  structure-fluid[large="5"],
+  structure-fluid[large="6"],
+  structure-fluid[large="7"],
+  structure-fluid[large="8"],
+  structure-fluid[large="9"],
+  structure-fluid[large="10"],
+  structure-fluid[large="11"],
+  structure-fluid[large="12"]
+/*  structure-fluid.col-lg-offset-1,
+  structure-fluid.col-lg-offset-2,
+  structure-fluid.col-lg-offset-3,
+  structure-fluid.col-lg-offset-4,
+  structure-fluid.col-lg-offset-5,
+  structure-fluid.col-lg-offset-6,
+  structure-fluid.col-lg-offset-7,
+  structure-fluid.col-lg-offset-8,
+  structure-fluid.col-lg-offset-9,
+  structure-fluid.col-lg-offset-10,
+  structure-fluid.col-lg-offset-11,
+  structure-fluid.col-lg-offset-12 */
   {
     box-sizing: border-box;
     display: -webkit-box;
@@ -913,7 +913,7 @@ eg-grid.last-xs {
     padding-left: 0rem;
   }
 
-  eg-grid[large]{
+  structure-fluid[large]{
     -webkit-box-flex: 1;
     -webkit-flex-grow: 1;
     -ms-flex-positive: 1;
@@ -924,135 +924,135 @@ eg-grid.last-xs {
     max-width: 100%;
   }
 
-  eg-grid[large="1"] {
+  structure-fluid[large="1"] {
     -webkit-flex-basis: 8.333333333%;
     -ms-flex-preferred-size: 8.333333333%;
     flex-basis: 8.333333333%;
     max-width: 8.333333333%;
   }
 
-  eg-grid[large="2"] {
+  structure-fluid[large="2"] {
     -webkit-flex-basis: 16.666666667%;
     -ms-flex-preferred-size: 16.666666667%;
     flex-basis: 16.666666667%;
     max-width: 16.666666667%;
   }
 
-  eg-grid[large="3"] {
+  structure-fluid[large="3"] {
     -webkit-flex-basis: 25%;
     -ms-flex-preferred-size: 25%;
     flex-basis: 25%;
     max-width: 25%;
   }
 
-  eg-grid[large="4"] {
+  structure-fluid[large="4"] {
     -webkit-flex-basis: 33.333333333%;
     -ms-flex-preferred-size: 33.333333333%;
     flex-basis: 33.333333333%;
     max-width: 33.333333333%;
   }
 
-  eg-grid[large="5"] {
+  structure-fluid[large="5"] {
     -webkit-flex-basis: 41.666666667%;
     -ms-flex-preferred-size: 41.666666667%;
     flex-basis: 41.666666667%;
     max-width: 41.666666667%;
   }
 
-  eg-grid[large="6"] {
+  structure-fluid[large="6"] {
     -webkit-flex-basis: 50%;
     -ms-flex-preferred-size: 50%;
     flex-basis: 50%;
     max-width: 50%;
   }
 
-  eg-grid[large="7"] {
+  structure-fluid[large="7"] {
     -webkit-flex-basis: 58.333333333%;
     -ms-flex-preferred-size: 58.333333333%;
     flex-basis: 58.333333333%;
     max-width: 58.333333333%;
   }
 
-  eg-grid[large="8"] {
+  structure-fluid[large="8"] {
     -webkit-flex-basis: 66.666666667%;
     -ms-flex-preferred-size: 66.666666667%;
     flex-basis: 66.666666667%;
     max-width: 66.666666667%;
   }
 
-  eg-grid[large="9"] {
+  structure-fluid[large="9"] {
     -webkit-flex-basis: 75%;
     -ms-flex-preferred-size: 75%;
     flex-basis: 75%;
     max-width: 75%;
   }
 
-  eg-grid[large="10"] {
+  structure-fluid[large="10"] {
     -webkit-flex-basis: 83.333333333%;
     -ms-flex-preferred-size: 83.333333333%;
     flex-basis: 83.333333333%;
     max-width: 83.333333333%;
   }
 
-  eg-grid[large="11"] {
+  structure-fluid[large="11"] {
     -webkit-flex-basis: 91.666666667%;
     -ms-flex-preferred-size: 91.666666667%;
     flex-basis: 91.666666667%;
     max-width: 91.666666667%;
   }
 
-  eg-grid[large="12"] {
+  structure-fluid[large="12"] {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     max-width: 100%;
   }
 
-  eg-grid.col-lg-offset-1 {
+  structure-fluid.col-lg-offset-1 {
     margin-left: 8.333333333%;
   }
 
-  eg-grid.col-lg-offset-2 {
+  structure-fluid.col-lg-offset-2 {
     margin-left: 16.666666667%;
   }
 
-  eg-grid.col-lg-offset-3 {
+  structure-fluid.col-lg-offset-3 {
     margin-left: 25%;
   }
 
-  eg-grid.col-lg-offset-4 {
+  structure-fluid.col-lg-offset-4 {
     margin-left: 33.333333333%;
   }
 
-  eg-grid.col-lg-offset-5 {
+  structure-fluid.col-lg-offset-5 {
     margin-left: 41.666666667%;
   }
 
-  eg-grid.col-lg-offset-6 {
+  structure-fluid.col-lg-offset-6 {
     margin-left: 50%;
   }
 
-  eg-grid.col-lg-offset-7 {
+  structure-fluid.col-lg-offset-7 {
     margin-left: 58.333333333%;
   }
 
-  eg-grid.col-lg-offset-8 {
+  structure-fluid.col-lg-offset-8 {
     margin-left: 66.666666667%;
   }
 
-  eg-grid.col-lg-offset-9 {
+  structure-fluid.col-lg-offset-9 {
     margin-left: 75%;
   }
 
-  eg-grid.col-lg-offset-10 {
+  structure-fluid.col-lg-offset-10 {
     margin-left: 83.333333333%;
   }
 
-  eg-grid.col-lg-offset-11 {
+  structure-fluid.col-lg-offset-11 {
     margin-left: 91.666666667%;
   }
 
-  eg-grid.start-lg {
+  structure-fluid.start-lg {
     -webkit-box-pack: start;
     -webkit-justify-content: flex-start;
     -ms-flex-pack: start;
@@ -1060,7 +1060,7 @@ eg-grid.last-xs {
     text-align: start;
   }
 
-  eg-grid.center-lg {
+  structure-fluid.center-lg {
     -webkit-box-pack: center;
     -webkit-justify-content: center;
     -ms-flex-pack: center;
@@ -1068,7 +1068,7 @@ eg-grid.last-xs {
     text-align: center;
   }
 
-  eg-grid.end-lg {
+  structure-fluid.end-lg {
     -webkit-box-pack: end;
     -webkit-justify-content: flex-end;
     -ms-flex-pack: end;
@@ -1076,48 +1076,48 @@ eg-grid.last-xs {
     text-align: end;
   }
 
-  eg-grid.top-lg {
+  structure-fluid.top-lg {
     -webkit-box-align: start;
     -webkit-align-items: flex-start;
     -ms-flex-align: start;
     align-items: flex-start;
   }
 
-  eg-grid.middle-lg {
+  structure-fluid.middle-lg {
     -webkit-box-align: center;
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
   }
 
-  eg-grid.bottom-lg {
+  structure-fluid.bottom-lg {
     -webkit-box-align: end;
     -webkit-align-items: flex-end;
     -ms-flex-align: end;
     align-items: flex-end;
   }
 
-  eg-grid.around-lg {
+  structure-fluid.around-lg {
     -webkit-justify-content: space-around;
     -ms-flex-pack: distribute;
     justify-content: space-around;
   }
 
-  eg-grid.between-lg {
+  structure-fluid.between-lg {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
     justify-content: space-between;
   }
 
-  eg-grid.first-lg {
+  structure-fluid.first-lg {
     -webkit-box-ordinal-group: 0;
     -webkit-order: -1;
     -ms-flex-order: -1;
     order: -1;
   }
 
-  eg-grid.last-lg {
+  structure-fluid.last-lg {
     -webkit-box-ordinal-group: 2;
     -webkit-order: 1;
     -ms-flex-order: 1;

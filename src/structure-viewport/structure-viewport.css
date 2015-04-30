@@ -20,18 +20,23 @@
 
 /* TODO: use var() everywhere */
 
-eg-structure[container-fluid] {
+body[structure-viewport] {
+  margin: 0;
+  padding: 0;
+}
+
+structure-viewport[container-fluid] {
   margin-right: auto;
   margin-left: auto;
 /*  padding-right: 2rem;
   padding-left: 2rem;*/
 }
 
-eg-structure[fullscreen] {
+structure-viewport[fullscreen] {
   min-height: 100vw;
 }
 
-eg-structure[group] {
+structure-viewport[group] {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -49,7 +54,7 @@ eg-structure[group] {
   margin-left: -0.5rem;*/
 }
 
-eg-structure[group][reverse] {
+structure-viewport[group][reverse] {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
   -webkit-flex-direction: row-reverse;
@@ -60,7 +65,7 @@ eg-structure[group][reverse] {
   flex-wrap: row-reverse;
 }
 
-eg-structure[reverse]:not([group]) {
+structure-viewport[reverse]:not([group]) {
   -webkit-box-orient: vertical;
   -webkit-box-direction: reverse;
   -webkit-flex-direction: column-reverse;
@@ -71,32 +76,32 @@ eg-structure[reverse]:not([group]) {
   flex-wrap: column-reverse;
 }
 
-eg-structure[small],
-eg-structure[small="1"],
-eg-structure[small="2"],
-eg-structure[small="3"],
-eg-structure[small="4"],
-eg-structure[small="5"],
-eg-structure[small="6"],
-eg-structure[small="7"],
-eg-structure[small="8"],
-eg-structure[small="9"],
-eg-structure[small="10"],
-eg-structure[small="11"],
-eg-structure[small="12"]
+structure-viewport[small],
+structure-viewport[small="1"],
+structure-viewport[small="2"],
+structure-viewport[small="3"],
+structure-viewport[small="4"],
+structure-viewport[small="5"],
+structure-viewport[small="6"],
+structure-viewport[small="7"],
+structure-viewport[small="8"],
+structure-viewport[small="9"],
+structure-viewport[small="10"],
+structure-viewport[small="11"],
+structure-viewport[small="12"]
 /* TODO: Do offsets */
-/*eg-structure[small=]-offset-1,
-eg-structure[small=]-offset-2,
-eg-structure[small=]-offset-3,
-eg-structure[small=]-offset-4,
-eg-structure[small=]-offset-5,
-eg-structure[small=]-offset-6,
-eg-structure[small=]-offset-7,
-eg-structure[small=]-offset-8,
-eg-structure[small=]-offset-9,
-eg-structure[small=]-offset-10,*/
-/*eg-structure[small=]-offset-11,
-eg-structure[small=]-offset-12 */
+/*structure-viewport[small=]-offset-1,
+structure-viewport[small=]-offset-2,
+structure-viewport[small=]-offset-3,
+structure-viewport[small=]-offset-4,
+structure-viewport[small=]-offset-5,
+structure-viewport[small=]-offset-6,
+structure-viewport[small=]-offset-7,
+structure-viewport[small=]-offset-8,
+structure-viewport[small=]-offset-9,
+structure-viewport[small=]-offset-10,*/
+/*structure-viewport[small=]-offset-11,
+structure-viewport[small=]-offset-12 */
 {
   box-sizing: border-box;
   display: -webkit-box;
@@ -119,7 +124,7 @@ eg-structure[small=]-offset-12 */
   padding-left: 0rem;
 }
 
-eg-structure[small] {
+structure-viewport[small] {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -130,135 +135,135 @@ eg-structure[small] {
   max-width: 100vw;
 }
 
-eg-structure[small="1"] {
+structure-viewport[small="1"] {
   -webkit-flex-basis: 8.333333333vw;
   -ms-flex-preferred-size: 8.333333333vw;
   flex-basis: 8.333333333vw;
   max-width: 8.333333333vw;
 }
 
-eg-structure[small="2"] {
+structure-viewport[small="2"] {
   -webkit-flex-basis: 16.666666667vw;
   -ms-flex-preferred-size: 16.666666667vw;
   flex-basis: 16.666666667vw;
   max-width: 16.666666667vw;
 }
 
-eg-structure[small="3"] {
+structure-viewport[small="3"] {
   -webkit-flex-basis: 25vw;
   -ms-flex-preferred-size: 25vw;
   flex-basis: 25vw;
   max-width: 25vw;
 }
 
-eg-structure[small="4"] {
+structure-viewport[small="4"] {
   -webkit-flex-basis: 33.333333333vw;
   -ms-flex-preferred-size: 33.333333333vw;
   flex-basis: 33.333333333vw;
   max-width: 33.333333333vw;
 }
 
-eg-structure[small="5"] {
+structure-viewport[small="5"] {
   -webkit-flex-basis: 41.666666667vw;
   -ms-flex-preferred-size: 41.666666667vw;
   flex-basis: 41.666666667vw;
   max-width: 41.666666667vw;
 }
 
-eg-structure[small="6"] {
+structure-viewport[small="6"] {
   -webkit-flex-basis: 50vw;
   -ms-flex-preferred-size: 50vw;
   flex-basis: 50vw;
   max-width: 50vw;
 }
 
-eg-structure[small="7"] {
+structure-viewport[small="7"] {
   -webkit-flex-basis: 58.333333333vw;
   -ms-flex-preferred-size: 58.333333333vw;
   flex-basis: 58.333333333vw;
   max-width: 58.333333333vw;
 }
 
-eg-structure[small="8"] {
+structure-viewport[small="8"] {
   -webkit-flex-basis: 66.666666667vw;
   -ms-flex-preferred-size: 66.666666667vw;
   flex-basis: 66.666666667vw;
   max-width: 66.666666667vw;
 }
 
-eg-structure[small="9"] {
+structure-viewport[small="9"] {
   -webkit-flex-basis: 75vw;
   -ms-flex-preferred-size: 75vw;
   flex-basis: 75vw;
   max-width: 75vw;
 }
 
-eg-structure[small="10"] {
+structure-viewport[small="10"] {
   -webkit-flex-basis: 83.333333333vw;
   -ms-flex-preferred-size: 83.333333333vw;
   flex-basis: 83.333333333vw;
   max-width: 83.333333333vw;
 }
 
-eg-structure[small="11"] {
+structure-viewport[small="11"] {
   -webkit-flex-basis: 91.666666667vw;
   -ms-flex-preferred-size: 91.666666667vw;
   flex-basis: 91.666666667vw;
   max-width: 91.666666667vw;
 }
 
-eg-structure[small="12"] {
+structure-viewport[small="12"] {
   -webkit-flex-basis: 100vw;
   -ms-flex-preferred-size: 100vw;
   flex-basis: 100vw;
   max-width: 100vw;
 }
 
-/*eg-structure[small=]-offset-1 {
+/*structure-viewport[small=]-offset-1 {
   margin-left: 8.333333333vw;
 }
 
-eg-structure[small=]-offset-2 {
+structure-viewport[small=]-offset-2 {
   margin-left: 16.666666667vw;
 }
 
-eg-structure[small=]-offset-3 {
+structure-viewport[small=]-offset-3 {
   margin-left: 25vw;
 }
 
-eg-structure[small=]-offset-4 {
+structure-viewport[small=]-offset-4 {
   margin-left: 33.333333333vw;
 }
 
-eg-structure[small=]-offset-5 {
+structure-viewport[small=]-offset-5 {
   margin-left: 41.666666667vw;
 }
 
-eg-structure[small=]-offset-6 {
+structure-viewport[small=]-offset-6 {
   margin-left: 50vw;
 }
 
-eg-structure[small=]-offset-7 {
+structure-viewport[small=]-offset-7 {
   margin-left: 58.333333333vw;
 }
 
-eg-structure[small=]-offset-8 {
+structure-viewport[small=]-offset-8 {
   margin-left: 66.666666667vw;
 }
 
-eg-structure[small=]-offset-9 {
+structure-viewport[small=]-offset-9 {
   margin-left: 75vw;
 }
 
-eg-structure[small=]-offset-10 {
+structure-viewport[small=]-offset-10 {
   margin-left: 83.333333333vw;
 }
 
-eg-structure[small=]-offset-11 {
+structure-viewport[small=]-offset-11 {
   margin-left: 91.666666667vw;
 }*/
 
-/*eg-structure.start-xs {
+/*structure-viewport.start-xs {
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
@@ -266,7 +271,7 @@ eg-structure[small=]-offset-11 {
   text-align: start;
 }*/
 
-eg-structure[align-x="center"][align-y="center"] {
+structure-viewport[align-x="center"][align-y="center"] {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -274,7 +279,7 @@ eg-structure[align-x="center"][align-y="center"] {
 /*  text-align: center;*/
 }
 
-eg-structure.end-xs {
+structure-viewport.end-xs {
   -webkit-box-pack: end;
   -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
@@ -282,48 +287,48 @@ eg-structure.end-xs {
   text-align: end;
 }
 
-eg-structure.top-xs {
+structure-viewport.top-xs {
   -webkit-box-align: start;
   -webkit-align-items: flex-start;
   -ms-flex-align: start;
   align-items: flex-start;
 }
 
-eg-structure[align-y="center"] {
+structure-viewport[align-y="center"] {
   -webkit-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
 }
 
-eg-structure.bottom-xs {
+structure-viewport.bottom-xs {
   -webkit-box-align: end;
   -webkit-align-items: flex-end;
   -ms-flex-align: end;
   align-items: flex-end;
 }
 
-eg-structure.around-xs {
+structure-viewport.around-xs {
   -webkit-justify-content: space-around;
   -ms-flex-pack: distribute;
   justify-content: space-around;
 }
 
-eg-structure.between-xs {
+structure-viewport.between-xs {
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
-eg-structure.first-xs {
+structure-viewport.first-xs {
   -webkit-box-ordinal-group: 0;
   -webkit-order: -1;
   -ms-flex-order: -1;
   order: -1;
 }
 
-eg-structure.last-xs {
+structure-viewport.last-xs {
   -webkit-box-ordinal-group: 2;
   -webkit-order: 1;
   -ms-flex-order: 1;
@@ -331,35 +336,35 @@ eg-structure.last-xs {
 }
 
 @media only screen and ( min-width: 48em ) ) {
-  eg-structure[group] {
+  structure-viewport[group] {
     width: 46rem;
   }
 
-  eg-structure[small],
-  eg-structure[small="1"],
-  eg-structure[small="2"],
-  eg-structure[small="3"],
-  eg-structure[small="4"],
-  eg-structure[small="5"],
-  eg-structure[small="6"],
-  eg-structure[small="7"],
-  eg-structure[small="8"],
-  eg-structure[small="9"],
-  eg-structure[small="10"],
-  eg-structure[small="11"],
-  eg-structure[small="12"]
-/*  eg-structure.col-sm-offset-1,
-  eg-structure.col-sm-offset-2,
-  eg-structure.col-sm-offset-3,
-  eg-structure.col-sm-offset-4,
-  eg-structure.col-sm-offset-5,
-  eg-structure.col-sm-offset-6,
-  eg-structure.col-sm-offset-7,
-  eg-structure.col-sm-offset-8,
-  eg-structure.col-sm-offset-9,
-  eg-structure.col-sm-offset-10,
-  eg-structure.col-sm-offset-11,
-  eg-structure.col-sm-offset-12 */
+  structure-viewport[small],
+  structure-viewport[small="1"],
+  structure-viewport[small="2"],
+  structure-viewport[small="3"],
+  structure-viewport[small="4"],
+  structure-viewport[small="5"],
+  structure-viewport[small="6"],
+  structure-viewport[small="7"],
+  structure-viewport[small="8"],
+  structure-viewport[small="9"],
+  structure-viewport[small="10"],
+  structure-viewport[small="11"],
+  structure-viewport[small="12"]
+/*  structure-viewport.col-sm-offset-1,
+  structure-viewport.col-sm-offset-2,
+  structure-viewport.col-sm-offset-3,
+  structure-viewport.col-sm-offset-4,
+  structure-viewport.col-sm-offset-5,
+  structure-viewport.col-sm-offset-6,
+  structure-viewport.col-sm-offset-7,
+  structure-viewport.col-sm-offset-8,
+  structure-viewport.col-sm-offset-9,
+  structure-viewport.col-sm-offset-10,
+  structure-viewport.col-sm-offset-11,
+  structure-viewport.col-sm-offset-12 */
   {
     box-sizing: border-box;
     display: -webkit-box;
@@ -382,7 +387,7 @@ eg-structure.last-xs {
     padding-left: 0rem;
   }
 
-  eg-structure[small]{
+  structure-viewport[small]{
     -webkit-box-flex: 1;
     -webkit-flex-grow: 1;
     -ms-flex-positive: 1;
@@ -393,135 +398,135 @@ eg-structure.last-xs {
     max-width: 100vw;
   }
 
-  eg-structure[small="1"] {
+  structure-viewport[small="1"] {
     -webkit-flex-basis: 8.333333333vw;
     -ms-flex-preferred-size: 8.333333333vw;
     flex-basis: 8.333333333vw;
     max-width: 8.333333333vw;
   }
 
-  eg-structure[small="2"] {
+  structure-viewport[small="2"] {
     -webkit-flex-basis: 16.666666667vw;
     -ms-flex-preferred-size: 16.666666667vw;
     flex-basis: 16.666666667vw;
     max-width: 16.666666667vw;
   }
 
-  eg-structure[small="3"] {
+  structure-viewport[small="3"] {
     -webkit-flex-basis: 25vw;
     -ms-flex-preferred-size: 25vw;
     flex-basis: 25vw;
     max-width: 25vw;
   }
 
-  eg-structure[small="4"] {
+  structure-viewport[small="4"] {
     -webkit-flex-basis: 33.333333333vw;
     -ms-flex-preferred-size: 33.333333333vw;
     flex-basis: 33.333333333vw;
     max-width: 33.333333333vw;
   }
 
-  eg-structure[small="5"] {
+  structure-viewport[small="5"] {
     -webkit-flex-basis: 41.666666667vw;
     -ms-flex-preferred-size: 41.666666667vw;
     flex-basis: 41.666666667vw;
     max-width: 41.666666667vw;
   }
 
-  eg-structure[small="6"] {
+  structure-viewport[small="6"] {
     -webkit-flex-basis: 50vw;
     -ms-flex-preferred-size: 50vw;
     flex-basis: 50vw;
     max-width: 50vw;
   }
 
-  eg-structure[small="7"] {
+  structure-viewport[small="7"] {
     -webkit-flex-basis: 58.333333333vw;
     -ms-flex-preferred-size: 58.333333333vw;
     flex-basis: 58.333333333vw;
     max-width: 58.333333333vw;
   }
 
-  eg-structure[small="8"] {
+  structure-viewport[small="8"] {
     -webkit-flex-basis: 66.666666667vw;
     -ms-flex-preferred-size: 66.666666667vw;
     flex-basis: 66.666666667vw;
     max-width: 66.666666667vw;
   }
 
-  eg-structure[small="9"] {
+  structure-viewport[small="9"] {
     -webkit-flex-basis: 75vw;
     -ms-flex-preferred-size: 75vw;
     flex-basis: 75vw;
     max-width: 75vw;
   }
 
-  eg-structure[small="10"] {
+  structure-viewport[small="10"] {
     -webkit-flex-basis: 83.333333333vw;
     -ms-flex-preferred-size: 83.333333333vw;
     flex-basis: 83.333333333vw;
     max-width: 83.333333333vw;
   }
 
-  eg-structure[small="11"] {
+  structure-viewport[small="11"] {
     -webkit-flex-basis: 91.666666667vw;
     -ms-flex-preferred-size: 91.666666667vw;
     flex-basis: 91.666666667vw;
     max-width: 91.666666667vw;
   }
 
-  eg-structure[small="12"] {
+  structure-viewport[small="12"] {
     -webkit-flex-basis: 100vw;
     -ms-flex-preferred-size: 100vw;
     flex-basis: 100vw;
     max-width: 100vw;
   }
 /*
-  eg-structure.col-sm-offset-1 {
+  structure-viewport.col-sm-offset-1 {
     margin-left: 8.333333333vw;
   }
 
-  eg-structure.col-sm-offset-2 {
+  structure-viewport.col-sm-offset-2 {
     margin-left: 16.666666667vw;
   }
 
-  eg-structure.col-sm-offset-3 {
+  structure-viewport.col-sm-offset-3 {
     margin-left: 25vw;
   }
 
-  eg-structure.col-sm-offset-4 {
+  structure-viewport.col-sm-offset-4 {
     margin-left: 33.333333333vw;
   }
 
-  eg-structure.col-sm-offset-5 {
+  structure-viewport.col-sm-offset-5 {
     margin-left: 41.666666667vw;
   }
 
-  eg-structure.col-sm-offset-6 {
+  structure-viewport.col-sm-offset-6 {
     margin-left: 50vw;
   }
 
-  eg-structure.col-sm-offset-7 {
+  structure-viewport.col-sm-offset-7 {
     margin-left: 58.333333333vw;
   }
 
-  eg-structure.col-sm-offset-8 {
+  structure-viewport.col-sm-offset-8 {
     margin-left: 66.666666667vw;
   }
 
-  eg-structure.col-sm-offset-9 {
+  structure-viewport.col-sm-offset-9 {
     margin-left: 75vw;
   }
 
-  eg-structure.col-sm-offset-10 {
+  structure-viewport.col-sm-offset-10 {
     margin-left: 83.333333333vw;
   }
 
-  eg-structure.col-sm-offset-11 {
+  structure-viewport.col-sm-offset-11 {
     margin-left: 91.666666667vw;
   } */
 
-  eg-structure.start-sm {
+  structure-viewport.start-sm {
     -webkit-box-pack: start;
     -webkit-justify-content: flex-start;
     -ms-flex-pack: start;
@@ -529,7 +534,7 @@ eg-structure.last-xs {
     text-align: start;
   }
 
-  eg-structure.center-sm {
+  structure-viewport.center-sm {
     -webkit-box-pack: center;
     -webkit-justify-content: center;
     -ms-flex-pack: center;
@@ -537,7 +542,7 @@ eg-structure.last-xs {
     text-align: center;
   }
 
-  eg-structure.end-sm {
+  structure-viewport.end-sm {
     -webkit-box-pack: end;
     -webkit-justify-content: flex-end;
     -ms-flex-pack: end;
@@ -545,48 +550,48 @@ eg-structure.last-xs {
     text-align: end;
   }
 
-  eg-structure.top-sm {
+  structure-viewport.top-sm {
     -webkit-box-align: start;
     -webkit-align-items: flex-start;
     -ms-flex-align: start;
     align-items: flex-start;
   }
 
-  eg-structure.middle-sm {
+  structure-viewport.middle-sm {
     -webkit-box-align: center;
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
   }
 
-  eg-structure.bottom-sm {
+  structure-viewport.bottom-sm {
     -webkit-box-align: end;
     -webkit-align-items: flex-end;
     -ms-flex-align: end;
     align-items: flex-end;
   }
 
-  eg-structure.around-sm {
+  structure-viewport.around-sm {
     -webkit-justify-content: space-around;
     -ms-flex-pack: distribute;
     justify-content: space-around;
   }
 
-  eg-structure.between-sm {
+  structure-viewport.between-sm {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
     justify-content: space-between;
   }
 
-  eg-structure.first-sm {
+  structure-viewport.first-sm {
     -webkit-box-ordinal-group: 0;
     -webkit-order: -1;
     -ms-flex-order: -1;
     order: -1;
   }
 
-  eg-structure.last-sm {
+  structure-viewport.last-sm {
     -webkit-box-ordinal-group: 2;
     -webkit-order: 1;
     -ms-flex-order: 1;
@@ -595,35 +600,35 @@ eg-structure.last-xs {
 }
 
 @media only screen and ( min-width: 62em ) {
-  eg-structure.container {
+  structure-viewport.container {
     width: 61rem;
   }
 
-  eg-structure[medium],
-  eg-structure[medium="1"],
-  eg-structure[medium="2"],
-  eg-structure[medium="3"],
-  eg-structure[medium="4"],
-  eg-structure[medium="5"],
-  eg-structure[medium="6"],
-  eg-structure[medium="7"],
-  eg-structure[medium="8"],
-  eg-structure[medium="9"],
-  eg-structure[medium="10"],
-  eg-structure[medium="11"],
-  eg-structure[medium="12"]
-/*  eg-structure.col-md-offset-1,
-  eg-structure.col-md-offset-2,
-  eg-structure.col-md-offset-3,
-  eg-structure.col-md-offset-4,
-  eg-structure.col-md-offset-5,
-  eg-structure.col-md-offset-6,
-  eg-structure.col-md-offset-7,
-  eg-structure.col-md-offset-8,
-  eg-structure.col-md-offset-9,
-  eg-structure.col-md-offset-10,
-  eg-structure.col-md-offset-11,
-  eg-structure.col-md-offset-12*/ 
+  structure-viewport[medium],
+  structure-viewport[medium="1"],
+  structure-viewport[medium="2"],
+  structure-viewport[medium="3"],
+  structure-viewport[medium="4"],
+  structure-viewport[medium="5"],
+  structure-viewport[medium="6"],
+  structure-viewport[medium="7"],
+  structure-viewport[medium="8"],
+  structure-viewport[medium="9"],
+  structure-viewport[medium="10"],
+  structure-viewport[medium="11"],
+  structure-viewport[medium="12"]
+/*  structure-viewport.col-md-offset-1,
+  structure-viewport.col-md-offset-2,
+  structure-viewport.col-md-offset-3,
+  structure-viewport.col-md-offset-4,
+  structure-viewport.col-md-offset-5,
+  structure-viewport.col-md-offset-6,
+  structure-viewport.col-md-offset-7,
+  structure-viewport.col-md-offset-8,
+  structure-viewport.col-md-offset-9,
+  structure-viewport.col-md-offset-10,
+  structure-viewport.col-md-offset-11,
+  structure-viewport.col-md-offset-12*/ 
   {
     box-sizing: border-box;
     display: -webkit-box;
@@ -647,7 +652,7 @@ eg-structure.last-xs {
   }
 
 
-  eg-structure[medium]{
+  structure-viewport[medium]{
     -webkit-box-flex: 1;
     -webkit-flex-grow: 1;
     -ms-flex-positive: 1;
@@ -658,84 +663,84 @@ eg-structure.last-xs {
     max-width: 100vw;
   }
 
-  eg-structure[medium="1"] {
+  structure-viewport[medium="1"] {
     -webkit-flex-basis: 8.333333333vw;
     -ms-flex-preferred-size: 8.333333333vw;
     flex-basis: 8.333333333vw;
     max-width: 8.333333333vw;
   }
 
-  eg-structure[medium="2"] {
+  structure-viewport[medium="2"] {
     -webkit-flex-basis: 16.666666667vw;
     -ms-flex-preferred-size: 16.666666667vw;
     flex-basis: 16.666666667vw;
     max-width: 16.666666667vw;
   }
 
-  eg-structure[medium="3"] {
+  structure-viewport[medium="3"] {
     -webkit-flex-basis: 25vw;
     -ms-flex-preferred-size: 25vw;
     flex-basis: 25vw;
     max-width: 25vw;
   }
 
-  eg-structure[medium="4"] {
+  structure-viewport[medium="4"] {
     -webkit-flex-basis: 33.333333333vw;
     -ms-flex-preferred-size: 33.333333333vw;
     flex-basis: 33.333333333vw;
     max-width: 33.333333333vw;
   }
 
-  eg-structure[medium="5"] {
+  structure-viewport[medium="5"] {
     -webkit-flex-basis: 41.666666667vw;
     -ms-flex-preferred-size: 41.666666667vw;
     flex-basis: 41.666666667vw;
     max-width: 41.666666667vw;
   }
 
-  eg-structure[medium="6"] {
+  structure-viewport[medium="6"] {
     -webkit-flex-basis: 50vw;
     -ms-flex-preferred-size: 50vw;
     flex-basis: 50vw;
     max-width: 50vw;
   }
 
-  eg-structure[medium="7"] {
+  structure-viewport[medium="7"] {
     -webkit-flex-basis: 58.333333333vw;
     -ms-flex-preferred-size: 58.333333333vw;
     flex-basis: 58.333333333vw;
     max-width: 58.333333333vw;
   }
 
-  eg-structure[medium="8"] {
+  structure-viewport[medium="8"] {
     -webkit-flex-basis: 66.666666667vw;
     -ms-flex-preferred-size: 66.666666667vw;
     flex-basis: 66.666666667vw;
     max-width: 66.666666667vw;
   }
 
-  eg-structure[medium="9"] {
+  structure-viewport[medium="9"] {
     -webkit-flex-basis: 75vw;
     -ms-flex-preferred-size: 75vw;
     flex-basis: 75vw;
     max-width: 75vw;
   }
 
-  eg-structure[medium="10"] {
+  structure-viewport[medium="10"] {
     -webkit-flex-basis: 83.333333333vw;
     -ms-flex-preferred-size: 83.333333333vw;
     flex-basis: 83.333333333vw;
     max-width: 83.333333333vw;
   }
 
-  eg-structure[medium="11"] {
+  structure-viewport[medium="11"] {
     -webkit-flex-basis: 91.666666667vw;
     -ms-flex-preferred-size: 91.666666667vw;
     flex-basis: 91.666666667vw;
     max-width: 91.666666667vw;
   }
 
-  eg-structure[medium="12"] {
+  structure-viewport[medium="12"] {
     -webkit-flex-basis: 100vw;
     -ms-flex-preferred-size: 100vw;
     flex-basis: 100vw;
@@ -743,51 +748,51 @@ eg-structure.last-xs {
   }
 
 
-  eg-structure.col-md-offset-1 {
+  structure-viewport.col-md-offset-1 {
     margin-left: 8.333333333vw;
   }
 
-  eg-structure.col-md-offset-2 {
+  structure-viewport.col-md-offset-2 {
     margin-left: 16.666666667vw;
   }
 
-  eg-structure.col-md-offset-3 {
+  structure-viewport.col-md-offset-3 {
     margin-left: 25vw;
   }
 
-  eg-structure.col-md-offset-4 {
+  structure-viewport.col-md-offset-4 {
     margin-left: 33.333333333vw;
   }
 
-  eg-structure.col-md-offset-5 {
+  structure-viewport.col-md-offset-5 {
     margin-left: 41.666666667vw;
   }
 
-  eg-structure.col-md-offset-6 {
+  structure-viewport.col-md-offset-6 {
     margin-left: 50vw;
   }
 
-  eg-structure.col-md-offset-7 {
+  structure-viewport.col-md-offset-7 {
     margin-left: 58.333333333vw;
   }
 
-  eg-structure.col-md-offset-8 {
+  structure-viewport.col-md-offset-8 {
     margin-left: 66.666666667vw;
   }
 
-  eg-structure.col-md-offset-9 {
+  structure-viewport.col-md-offset-9 {
     margin-left: 75vw;
   }
 
-  eg-structure.col-md-offset-10 {
+  structure-viewport.col-md-offset-10 {
     margin-left: 83.333333333vw;
   }
 
-  eg-structure.col-md-offset-11 {
+  structure-viewport.col-md-offset-11 {
     margin-left: 91.666666667vw;
   }
 
-  eg-structure.start-md {
+  structure-viewport.start-md {
     -webkit-box-pack: start;
     -webkit-justify-content: flex-start;
     -ms-flex-pack: start;
@@ -795,7 +800,7 @@ eg-structure.last-xs {
     text-align: start;
   }
 
-  eg-structure.center-md {
+  structure-viewport.center-md {
     -webkit-box-pack: center;
     -webkit-justify-content: center;
     -ms-flex-pack: center;
@@ -803,7 +808,7 @@ eg-structure.last-xs {
     text-align: center;
   }
 
-  eg-structure.end-md {
+  structure-viewport.end-md {
     -webkit-box-pack: end;
     -webkit-justify-content: flex-end;
     -ms-flex-pack: end;
@@ -811,48 +816,48 @@ eg-structure.last-xs {
     text-align: end;
   }
 
-  eg-structure.top-md {
+  structure-viewport.top-md {
     -webkit-box-align: start;
     -webkit-align-items: flex-start;
     -ms-flex-align: start;
     align-items: flex-start;
   }
 
-  eg-structure.middle-md {
+  structure-viewport.middle-md {
     -webkit-box-align: center;
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
   }
 
-  eg-structure.bottom-md {
+  structure-viewport.bottom-md {
     -webkit-box-align: end;
     -webkit-align-items: flex-end;
     -ms-flex-align: end;
     align-items: flex-end;
   }
 
-  eg-structure.around-md {
+  structure-viewport.around-md {
     -webkit-justify-content: space-around;
     -ms-flex-pack: distribute;
     justify-content: space-around;
   }
 
-  eg-structure.between-md {
+  structure-viewport.between-md {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
     justify-content: space-between;
   }
 
-  eg-structure.first-md {
+  structure-viewport.first-md {
     -webkit-box-ordinal-group: 0;
     -webkit-order: -1;
     -ms-flex-order: -1;
     order: -1;
   }
 
-  eg-structure.last-md {
+  structure-viewport.last-md {
     -webkit-box-ordinal-group: 2;
     -webkit-order: 1;
     -ms-flex-order: 1;
@@ -862,35 +867,35 @@ eg-structure.last-xs {
 
 /*@media only screen and ( min-width: var( --screen-lg-min, 75em ) ) {*/
 @media only screen and ( min-width: 75em ) ) {
-  eg-structure[group] {
+  structure-viewport[group] {
     width: 71rem;
   }
 
-  eg-structure[large],
-  eg-structure[large="1"],
-  eg-structure[large="2"],
-  eg-structure[large="3"],
-  eg-structure[large="4"],
-  eg-structure[large="5"],
-  eg-structure[large="6"],
-  eg-structure[large="7"],
-  eg-structure[large="8"],
-  eg-structure[large="9"],
-  eg-structure[large="10"],
-  eg-structure[large="11"],
-  eg-structure[large="12"]
-/*  eg-structure.col-lg-offset-1,
-  eg-structure.col-lg-offset-2,
-  eg-structure.col-lg-offset-3,
-  eg-structure.col-lg-offset-4,
-  eg-structure.col-lg-offset-5,
-  eg-structure.col-lg-offset-6,
-  eg-structure.col-lg-offset-7,
-  eg-structure.col-lg-offset-8,
-  eg-structure.col-lg-offset-9,
-  eg-structure.col-lg-offset-10,
-  eg-structure.col-lg-offset-11,
-  eg-structure.col-lg-offset-12 */
+  structure-viewport[large],
+  structure-viewport[large="1"],
+  structure-viewport[large="2"],
+  structure-viewport[large="3"],
+  structure-viewport[large="4"],
+  structure-viewport[large="5"],
+  structure-viewport[large="6"],
+  structure-viewport[large="7"],
+  structure-viewport[large="8"],
+  structure-viewport[large="9"],
+  structure-viewport[large="10"],
+  structure-viewport[large="11"],
+  structure-viewport[large="12"]
+/*  structure-viewport.col-lg-offset-1,
+  structure-viewport.col-lg-offset-2,
+  structure-viewport.col-lg-offset-3,
+  structure-viewport.col-lg-offset-4,
+  structure-viewport.col-lg-offset-5,
+  structure-viewport.col-lg-offset-6,
+  structure-viewport.col-lg-offset-7,
+  structure-viewport.col-lg-offset-8,
+  structure-viewport.col-lg-offset-9,
+  structure-viewport.col-lg-offset-10,
+  structure-viewport.col-lg-offset-11,
+  structure-viewport.col-lg-offset-12 */
   {
     box-sizing: border-box;
     display: -webkit-box;
@@ -913,7 +918,7 @@ eg-structure.last-xs {
     padding-left: 0rem;
   }
 
-  eg-structure[large]{
+  structure-viewport[large]{
     -webkit-box-flex: 1;
     -webkit-flex-grow: 1;
     -ms-flex-positive: 1;
@@ -924,135 +929,135 @@ eg-structure.last-xs {
     max-width: 100vw;
   }
 
-  eg-structure[large="1"] {
+  structure-viewport[large="1"] {
     -webkit-flex-basis: 8.333333333vw;
     -ms-flex-preferred-size: 8.333333333vw;
     flex-basis: 8.333333333vw;
     max-width: 8.333333333vw;
   }
 
-  eg-structure[large="2"] {
+  structure-viewport[large="2"] {
     -webkit-flex-basis: 16.666666667vw;
     -ms-flex-preferred-size: 16.666666667vw;
     flex-basis: 16.666666667vw;
     max-width: 16.666666667vw;
   }
 
-  eg-structure[large="3"] {
+  structure-viewport[large="3"] {
     -webkit-flex-basis: 25vw;
     -ms-flex-preferred-size: 25vw;
     flex-basis: 25vw;
     max-width: 25vw;
   }
 
-  eg-structure[large="4"] {
+  structure-viewport[large="4"] {
     -webkit-flex-basis: 33.333333333vw;
     -ms-flex-preferred-size: 33.333333333vw;
     flex-basis: 33.333333333vw;
     max-width: 33.333333333vw;
   }
 
-  eg-structure[large="5"] {
+  structure-viewport[large="5"] {
     -webkit-flex-basis: 41.666666667vw;
     -ms-flex-preferred-size: 41.666666667vw;
     flex-basis: 41.666666667vw;
     max-width: 41.666666667vw;
   }
 
-  eg-structure[large="6"] {
+  structure-viewport[large="6"] {
     -webkit-flex-basis: 50vw;
     -ms-flex-preferred-size: 50vw;
     flex-basis: 50vw;
     max-width: 50vw;
   }
 
-  eg-structure[large="7"] {
+  structure-viewport[large="7"] {
     -webkit-flex-basis: 58.333333333vw;
     -ms-flex-preferred-size: 58.333333333vw;
     flex-basis: 58.333333333vw;
     max-width: 58.333333333vw;
   }
 
-  eg-structure[large="8"] {
+  structure-viewport[large="8"] {
     -webkit-flex-basis: 66.666666667vw;
     -ms-flex-preferred-size: 66.666666667vw;
     flex-basis: 66.666666667vw;
     max-width: 66.666666667vw;
   }
 
-  eg-structure[large="9"] {
+  structure-viewport[large="9"] {
     -webkit-flex-basis: 75vw;
     -ms-flex-preferred-size: 75vw;
     flex-basis: 75vw;
     max-width: 75vw;
   }
 
-  eg-structure[large="10"] {
+  structure-viewport[large="10"] {
     -webkit-flex-basis: 83.333333333vw;
     -ms-flex-preferred-size: 83.333333333vw;
     flex-basis: 83.333333333vw;
     max-width: 83.333333333vw;
   }
 
-  eg-structure[large="11"] {
+  structure-viewport[large="11"] {
     -webkit-flex-basis: 91.666666667vw;
     -ms-flex-preferred-size: 91.666666667vw;
     flex-basis: 91.666666667vw;
     max-width: 91.666666667vw;
   }
 
-  eg-structure[large="12"] {
+  structure-viewport[large="12"] {
     -webkit-flex-basis: 100vw;
     -ms-flex-preferred-size: 100vw;
     flex-basis: 100vw;
     max-width: 100vw;
   }
 
-  eg-structure.col-lg-offset-1 {
+  structure-viewport.col-lg-offset-1 {
     margin-left: 8.333333333vw;
   }
 
-  eg-structure.col-lg-offset-2 {
+  structure-viewport.col-lg-offset-2 {
     margin-left: 16.666666667vw;
   }
 
-  eg-structure.col-lg-offset-3 {
+  structure-viewport.col-lg-offset-3 {
     margin-left: 25vw;
   }
 
-  eg-structure.col-lg-offset-4 {
+  structure-viewport.col-lg-offset-4 {
     margin-left: 33.333333333vw;
   }
 
-  eg-structure.col-lg-offset-5 {
+  structure-viewport.col-lg-offset-5 {
     margin-left: 41.666666667vw;
   }
 
-  eg-structure.col-lg-offset-6 {
+  structure-viewport.col-lg-offset-6 {
     margin-left: 50vw;
   }
 
-  eg-structure.col-lg-offset-7 {
+  structure-viewport.col-lg-offset-7 {
     margin-left: 58.333333333vw;
   }
 
-  eg-structure.col-lg-offset-8 {
+  structure-viewport.col-lg-offset-8 {
     margin-left: 66.666666667vw;
   }
 
-  eg-structure.col-lg-offset-9 {
+  structure-viewport.col-lg-offset-9 {
     margin-left: 75vw;
   }
 
-  eg-structure.col-lg-offset-10 {
+  structure-viewport.col-lg-offset-10 {
     margin-left: 83.333333333vw;
   }
 
-  eg-structure.col-lg-offset-11 {
+  structure-viewport.col-lg-offset-11 {
     margin-left: 91.666666667vw;
   }
 
-  eg-structure.start-lg {
+  structure-viewport.start-lg {
     -webkit-box-pack: start;
     -webkit-justify-content: flex-start;
     -ms-flex-pack: start;
@@ -1060,7 +1065,7 @@ eg-structure.last-xs {
     text-align: start;
   }
 
-  eg-structure.center-lg {
+  structure-viewport.center-lg {
     -webkit-box-pack: center;
     -webkit-justify-content: center;
     -ms-flex-pack: center;
@@ -1068,7 +1073,7 @@ eg-structure.last-xs {
     text-align: center;
   }
 
-  eg-structure.end-lg {
+  structure-viewport.end-lg {
     -webkit-box-pack: end;
     -webkit-justify-content: flex-end;
     -ms-flex-pack: end;
@@ -1076,48 +1081,48 @@ eg-structure.last-xs {
     text-align: end;
   }
 
-  eg-structure.top-lg {
+  structure-viewport.top-lg {
     -webkit-box-align: start;
     -webkit-align-items: flex-start;
     -ms-flex-align: start;
     align-items: flex-start;
   }
 
-  eg-structure.middle-lg {
+  structure-viewport.middle-lg {
     -webkit-box-align: center;
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
   }
 
-  eg-structure.bottom-lg {
+  structure-viewport.bottom-lg {
     -webkit-box-align: end;
     -webkit-align-items: flex-end;
     -ms-flex-align: end;
     align-items: flex-end;
   }
 
-  eg-structure.around-lg {
+  structure-viewport.around-lg {
     -webkit-justify-content: space-around;
     -ms-flex-pack: distribute;
     justify-content: space-around;
   }
 
-  eg-structure.between-lg {
+  structure-viewport.between-lg {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
     justify-content: space-between;
   }
 
-  eg-structure.first-lg {
+  structure-viewport.first-lg {
     -webkit-box-ordinal-group: 0;
     -webkit-order: -1;
     -ms-flex-order: -1;
     order: -1;
   }
 
-  eg-structure.last-lg {
+  structure-viewport.last-lg {
     -webkit-box-ordinal-group: 2;
     -webkit-order: 1;
     -ms-flex-order: 1;

@@ -32,6 +32,6 @@ MyElementProto.createdCallback = function() {
 };
 
 // Registers element in the main document
-document.registerElement('eg-structure', {
+document.registerElement('structure-viewport', {
     prototype: MyElementProto
 });

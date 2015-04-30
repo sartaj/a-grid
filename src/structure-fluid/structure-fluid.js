@@ -32,6 +32,6 @@ egGrid.createdCallback = function() {
 };
 
 // Registers element in the main document
-document.registerElement('eg-grid', {
+document.registerElement('structure-fluid', {
     prototype: egGrid
 });
