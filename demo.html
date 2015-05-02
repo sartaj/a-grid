@@ -21,22 +21,49 @@
 
  -->
 
-<body structure-viewport>
-    <structure-viewport width="20" height="100" style="background:blue" >
-        <your-sidebar></your-sidebar>
+            <!--  <structure-fluid>
+                <structure-fluid small-width="1/12" medium="6" style="background: green" align-x="center" align-y="center">
+                    Evergreen
+                </structure-fluid>
+                <structure-fluid small="12" medium="6" style="background:blue">
+                    fluid
+                </structure-fluid>
+                <structure-fluid small="3" style="background:green">
+                    Blue
+                </structure-fluid>
+            </structure-fluid> -->
+
+
+<!--     
+
+    <structure-viewport width="30" height="100" style="background:blue">
     </structure-viewport>
-    <structure-viewport width="80" style="background:red">
-        <structure-fluid >
-            <structure-fluid small-width="1/12" medium="6" style="background: green" align-x="center" align-y="center">
-                Evergreen
-            </structure-fluid>
-            <structure-fluid small="12" medium="6" style="background:blue">
-                fluid
-            </structure-fluid>
-            <structure-fluid small="3" style="background:green">
-                Blue
-            </structure-fluid>
-        </structure-fluid>
+
+    <structure-viewport width="70" height="100" >
+
+        <structure-viewport height="50" style="background:red">
+        </structure-viewport>
+
+        <structure-viewport height="50">
+        </structure-viewport>
+
+    </structure-viewport>
+ -->
+
+
+<body structure-viewport>
+    <structure-viewport group>
+        <structure-viewport width="30" height="100" style="background:blue">
+            <your-sidebar></your-sidebar>
+        </structure-viewport>
+        <structure-viewport width="70" height="100" >
+            <structure-viewport group>
+                <structure-viewport height="50" style="background:red">
+                </structure-viewport>
+                <structure-viewport height="50">
+                </structure-viewport>
+            </structure-viewport>
+        </structure-viewport>
     </structure-viewport>
 </body>
 

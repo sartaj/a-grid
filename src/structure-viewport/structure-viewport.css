@@ -36,7 +36,7 @@ structure-viewport[fullscreen] {
   min-height: 100vw;
 }
 
-structure-viewport[group] {
+structure-viewport {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -89,6 +89,7 @@ structure-viewport[small="9"],
 structure-viewport[small="10"],
 structure-viewport[small="11"],
 structure-viewport[small="12"]
+
 /* TODO: Do offsets */
 /*structure-viewport[small=]-offset-1,
 structure-viewport[small=]-offset-2,

@@ -19,6 +19,17 @@ MyElementProto.createdCallback = function() {
     // Attributes on this will dictate the final $baseDiv element
         var $attr = this.attributes;
 
+        var attrWidth = this.getAttribute('width');
+        var attrHeight = this.getAttribute('height');
+
+        var width = attrWidth ? attrWidth + "vw" : "100%";
+        var height = attrHeight ? attrHeight + "vh" : "100%";
+
+        this.style.width = width;
+        this.style.height = height;
+
+        // if(this.parent)
+
     // Add content div
 
         if ($attr['col'] || $attr['small'] || $attr['large']) {
