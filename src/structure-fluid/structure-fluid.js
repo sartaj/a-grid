@@ -1,7 +1,7 @@
 // Creates an object based in the HTML Element prototype
-var egGrid = Object.create(HTMLElement.prototype);
+var structureFluid = Object.create(HTMLElement.prototype);
 
-egGrid.CSS_MAP = {
+structureFluid.CSS_MAP = {
     'small': 'col-xs-',
     'medium': 'col-md-',
     'align-x': 'contentX-xs-',
@@ -10,7 +10,7 @@ egGrid.CSS_MAP = {
 };
 
 // Fires when an instance of the element is created
-egGrid.createdCallback = function() {
+structureFluid.createdCallback = function() {
 
     // this is the current element
     // $baseDiv is the base element
@@ -25,13 +25,13 @@ egGrid.createdCallback = function() {
             var $contentDiv = document.createElement('div');
             $baseDiv.appendChild($contentDiv);
         } else {
-            $baseDiv.classList.add(this.CSS_MAP['row']);
-            $contentDiv = $baseDiv;
+            // // $baseDiv.classList.add(this.CSS_MAP['row']);
+            // $contentDiv = $baseDiv;
         }
 
 };
 
 // Registers element in the main document
 document.registerElement('structure-fluid', {
-    prototype: egGrid
+    prototype: structureFluid
 });

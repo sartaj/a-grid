@@ -10,7 +10,7 @@ MyElementProto.CSS_MAP = {
 };
 
 // Fires when an instance of the element is created
-MyElementProto.createdCallback = function() {
+MyElementProto.attachedCallback = function() {
 
     // this is the current element
     // $baseDiv is the base element
@@ -28,7 +28,34 @@ MyElementProto.createdCallback = function() {
         this.style.width = width;
         this.style.height = height;
 
-        // if(this.parent)
+        if(!this.parentNode) return;
+
+        // If parent isn't a group and this isn't a group.
+        if(
+            !this.parentNode.hasAttribute('group')
+            && !this.hasAttribute('group')
+        ) {
+            // this.parentNode.setAttribute('group', '');
+            console.warn("This element is not inside a group tag. Elements need to be elements to be stored in a group.", "More info: https://sartaj.github.io/structure/help/groups", this)
+        }
+
+        function createParent (thisElement) {
+
+            try {
+
+                var parent = thisElement.parentNode;
+ 
+                var newParent = document.createElement('structure-viewport');
+                newParent.setAttribute('group','');
+ 
+                newParent.appendChild(parent.childNodes);
+                parent.appendChild(newParent);
+
+            } catch(e) {
+                console.error(parent, parent.childNodes, newParent);
+            }
+
+        }
 
     // Add content div
 
