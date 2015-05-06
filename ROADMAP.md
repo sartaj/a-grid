@@ -1,5 +1,6 @@
 ## 1. TASKS
-
+	* Put structure-fluid inside of structure-viewport
+	* Border handler
 	* Tests
 	* Box Ordering
 	* Box Offset
