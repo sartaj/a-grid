@@ -63,7 +63,7 @@ MyElementProto.attachedCallback = function() {
             var $contentDiv = document.createElement('div');
             this.appendChild($contentDiv);
         } else {
-            $baseDiv.classList.add(this.CSS_MAP['row']);
+            // $baseDiv.classList.add(this.CSS_MAP['row']);
             $contentDiv = this;
         }
 
