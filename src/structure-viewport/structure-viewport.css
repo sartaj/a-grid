@@ -20,23 +20,11 @@
 
 /* TODO: use var() everywhere */
 
-body[structure-viewport] {
-  margin: 0;
-  padding: 0;
-}
 
-structure-viewport[container-fluid] {
-  margin-right: auto;
-  margin-left: auto;
-/*  padding-right: 2rem;
-  padding-left: 2rem;*/
-}
+/* Base */
 
-structure-viewport[fullscreen] {
-  min-height: 100vw;
-}
-
-structure-viewport {
+structure-viewport,
+*[structure-viewport] {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -52,6 +40,23 @@ structure-viewport {
   flex-wrap: wrap;
 /*  margin-right: -0.5rem;
   margin-left: -0.5rem;*/
+}
+
+body[structure-viewport] {
+  margin: 0;
+  padding: 0;
+}
+
+
+structure-viewport[container-fluid] {
+  margin-right: auto;
+  margin-left: auto;
+/*  padding-right: 2rem;
+  padding-left: 2rem;*/
+}
+
+structure-viewport[fullscreen] {
+  min-height: 100vw;
 }
 
 structure-viewport[group][reverse] {

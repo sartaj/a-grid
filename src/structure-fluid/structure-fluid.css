@@ -31,7 +31,7 @@ structure-fluid[fullscreen] {
   min-height: 100%;
 }
 
-structure-fluid[group] {
+structure-fluid {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -49,7 +49,7 @@ structure-fluid[group] {
   margin-left: -0.5rem;*/
 }
 
-structure-fluid[group][reverse] {
+structure-fluid[reverse] {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
   -webkit-flex-direction: row-reverse;
@@ -61,13 +61,7 @@ structure-fluid[group][reverse] {
 }
 
 structure-fluid[reverse]:not([group]) {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: reverse;
-  -webkit-flex-direction: column-reverse;
-  -ms-flex-direction: column-reverse;
   flex-direction: column-reverse;
-  -webkit-flex-wrap: column-reverse;
-  -ms-flex-wrap: column-reverse;
   flex-wrap: column-reverse;
 }
 

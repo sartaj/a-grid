@@ -36,7 +36,7 @@ MyElementProto.attachedCallback = function() {
             && !this.hasAttribute('group')
         ) {
             // this.parentNode.setAttribute('group', '');
-            console.warn("This element is not inside a group tag. Elements need to be elements to be stored in a group.", "More info: https://sartaj.github.io/structure/help/groups", this)
+            // console.warn("This element is not inside a group tag. Elements need to be elements to be stored in a group.", "More info: https://sartaj.github.io/structure/help/groups", this)
         }
 
         function createParent (thisElement) {
@@ -61,10 +61,10 @@ MyElementProto.attachedCallback = function() {
 
         if ($attr['col'] || $attr['small'] || $attr['large']) {
             var $contentDiv = document.createElement('div');
-            $baseDiv.appendChild($contentDiv);
+            this.appendChild($contentDiv);
         } else {
             $baseDiv.classList.add(this.CSS_MAP['row']);
-            $contentDiv = $baseDiv;
+            $contentDiv = this;
         }
 
 };
