@@ -4,13 +4,13 @@
 <head>
     <title></title>
     <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
-    <link rel="import" href="src/structure.html">
+    <link rel="import" href="dist/structure.html">
 </head>
 <!-- 
 
         Structure
 
-          • structure-viewport is based on size of the screen
+          • structure-solid is based on size of the screen
           • structure-fluid based on 12 columns or a percentage
           • structure-fixed is something that is fixed on the screen (i.e. stays visible while scrolling)
 
@@ -50,15 +50,53 @@
 
      -->
 
-<body structure-viewport>
-    <structure-viewport width="30" height="100" style="background:blue">
-    </structure-viewport>
-    <structure-viewport width="70" height="100">
-        <structure-viewport height="50" style="background:red">
-        </structure-viewport>
-        <structure-viewport height="50">
-        </structure-viewport>
-    </structure-viewport>
+<body structure-solid>
+    <structure-solid fixed top="0" left="0" width="100" height="7" style="background:blue">
+    </structure-solid>
+    <structure-solid fixed top="7" left="0" width="20" height="93" style="background:blue">
+          <structure-fluid small="4" >
+            1
+          </structure-fluid>
+          <structure-fluid small="4" >
+            1
+          </structure-fluid>
+          <structure-fluid small="4" >
+            1
+          </structure-fluid>
+    </structure-solid>
+    <structure-solid width="80" height="100" style="margin-left: 20vw; margin-top:7vh">
+        <structure-solid height="50" style="background:red">
+          <structure-fluid small="4" >
+            1
+          </structure-fluid>
+          <structure-fluid small="4" >
+            1
+          </structure-fluid>
+          <structure-fluid small="4" >
+            1
+          </structure-fluid>
+        </structure-solid>
+        <structure-solid>
+          <structure-fluid small="4" >
+            1
+          </structure-fluid>
+           <structure-fluid small="4" >
+            2
+          </structure-fluid>
+           <structure-fluid small="4" >
+            3
+          </structure-fluid>
+           <structure-fluid small="4" >
+            4
+          </structure-fluid>
+           <structure-fluid small="4" >
+            5
+          </structure-fluid>
+           <structure-fluid small="4" >
+            6
+          </structure-fluid>
+        </structure-solid>
+    </structure-solid>
 </body>
 
 </html>

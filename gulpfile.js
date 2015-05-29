@@ -1,8 +1,9 @@
-// Packages
+// Requires
 
   // Core 
   
   var gulp = require('gulp');
+  var clean = require('gulp-clean');
 
   // Transforms
 
@@ -14,49 +15,17 @@
       concat = require('gulp-concat');
 
   // Release
-  
   var git = require('gulp-git'),
       bump = require('gulp-bump'),
       filter = require('gulp-filter'),
       tag_version = require('gulp-tag-version');
 
-// Tasks
-
-  gulp.task('build', function() { return build()});
+// Release Task
 
   var releaseTasks = ['build'];
   gulp.task('patch', releaseTasks, function() { return release('patch'); });
   gulp.task('minor', releaseTasks, function() { return release('minor'); });
   gulp.task('major', releaseTasks, function() { return release('major'); });
-
-// Scripts
-
-  function build() {
-
-    // Single entry point to browserify 
-    gulp.src('src/**/*.js')
-      .pipe(browserify())
-      .pipe(uglify())
-      .pipe(gulp.dest('./dist'));
-
-    gulp.src('src/**/*.html')
-      .pipe(minifyHTML())
-      .pipe(gulp.dest('./dist'));
-
-    gulp.src('src/**/*.css')
-      .pipe(minifyCSS())
-      .pipe(gulp.dest('./dist'));
-
-    // gulp.src('./dist/eg-structure.html')
-    //   .pipe(vulcanize({
-    //       inlineScripts: true
-    //   }))
-    //   // .pipe(concat('eg-structure.html'))
-    //   .pipe(gulp.dest('./dist'));
-
-  }
-
-// Release
 
   function release(importance) {
 
@@ -78,3 +47,57 @@
       .pipe(tag_version());
 
   }
+
+// Build Task
+
+  gulp.task('build', ['clean','prepare-js','prepare-css','prepare-html'], function() {
+
+    gulp.src('./.tmp/structure.html')
+    .pipe(vulcanize({
+        inlineScripts: true,
+        inlineCss: true
+
+    }))
+    // .pipe(concat('structure.html'))
+    .pipe(gulp.dest('./dist'));
+
+  });
+
+  // Preparation
+
+    gulp.task('prepare-js', function() {
+
+      return gulp.src('src/**/*.js')
+        .pipe(browserify())
+        .pipe(uglify())
+        .pipe(gulp.dest('./.tmp'));
+
+    });
+
+    gulp.task('prepare-css', function() {
+
+      return gulp.src('src/**/*.css')
+        .pipe(minifyCSS())
+        .pipe(gulp.dest('./.tmp'));
+
+    });
+
+    gulp.task('prepare-html', function() {
+
+      return gulp.src('src/**/*.html')
+        .pipe(minifyHTML())
+        .pipe(gulp.dest('./.tmp'));
+
+    });
+
+// Utilities
+
+  gulp.task('clean', function() { return 
+    
+    return gulp.src('./.tmp')
+      .pipe(clean())
+    .pipe(gulp.src('./dist')
+      .pipe(clean()));
+  
+  });
+

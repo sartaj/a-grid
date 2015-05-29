@@ -1,12 +1,12 @@
 {
-  "name": "eg-grid",
+  "name": "structure-layout",
   "version": "0.3.1",
-  "homepage": "https://github.com/sartaj/eg-grid",
+  "homepage": "https://github.com/sartaj/structure",
   "authors": [
     "Sartaj"
   ],
-  "description": "A simplified grid web component with no library dependencies",
-  "main": "eg-grid.html",
+  "description": "A lightweight grid web component build around of viewports and fluid grids. No dependencies.",
+  "main": "dist/eg-grid.html",
   "moduleType": [
     "amd",
     "es6",
@@ -15,6 +15,10 @@
   "license": "MIT",
   "ignore": [
     "**/.*",
+    "src",
+    "examples",
+    "demos",
+    "design_argument",
     "node_modules",
     "bower_components",
     "test",

@@ -19,14 +19,21 @@ MyElementProto.attachedCallback = function() {
     // Attributes on this will dictate the final $baseDiv element
         var $attr = this.attributes;
 
-        var attrWidth = this.getAttribute('width');
-        var attrHeight = this.getAttribute('height');
+        var attrWidth = this.getAttribute('width'),
+            attrHeight = this.getAttribute('height');
 
-        var width = attrWidth ? attrWidth + "vw" : "100%";
-        var height = attrHeight ? attrHeight + "vh" : "100%";
+        var attrTop = this.getAttribute('top'),
+            attrLeft = this.getAttribute('left'),
+            attrRight = this.getAttribute('right'),
+            attrBottom = this.getAttribute('bottom');
 
-        this.style.width = width;
-        this.style.height = height;
+        this.style.width = attrWidth ? attrWidth + "vw" : "100%";
+        this.style.height = attrHeight ? attrHeight + "vh" : "100%";
+
+        this.style.top = attrTop ? attrTop + "vh" : "";
+        this.style.left = attrLeft ? attrLeft + "vh" : "";
+        this.style.right = attrRight ? attrRight + "vh" : "";
+        this.style.bottom = attrBottom ? attrBottom + "vh" : "";
 
         if(!this.parentNode) return;
 
@@ -45,7 +52,7 @@ MyElementProto.attachedCallback = function() {
 
                 var parent = thisElement.parentNode;
  
-                var newParent = document.createElement('structure-viewport');
+                var newParent = document.createElement('structure-solid');
                 newParent.setAttribute('group','');
  
                 newParent.appendChild(parent.childNodes);
@@ -70,6 +77,6 @@ MyElementProto.attachedCallback = function() {
 };
 
 // Registers element in the main document
-document.registerElement('structure-viewport', {
+document.registerElement('structure-solid', {
     prototype: MyElementProto
 });
