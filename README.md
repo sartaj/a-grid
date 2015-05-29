@@ -1,20 +1,34 @@
-# Evergreen Grid (eg-grid)
-Simplified grid using Flexbox and native Web Components.
+# Structure Layout
+A lightweight grid web component build around of viewports and fluid grids. No dependencies.
 
 ## Usage
 
 ```html
-<html>
-	<head>
-		<script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script> <!-- No ShadowDOM needed -->
-		<link rel="import" href="bower_components/evergreen-grid/dist/eg-grid.html">
-	</head>
-	<body>
-		<eg-grid group>
-			<eg-grid small="2" medium="2" large="3"></eg-grid>
-			<eg-grid small="2" ></eg-grid>
-		</eg-grid>
-	</body>
+<html
+<head>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/0.7.2/webcomponents-lite.min.js"></script>
+</head>
+<body structure-solid>
+    <structure-solid fixed top="0" left="0" width="100" height="7" >
+    	This remains to the viewport
+    </structure-solid>
+    <structure-solid fixed top="7" left="0" width="20" height="93">
+          <structure-fluid small="4" >
+            This is fluid
+          </structure-fluid>
+          <structure-fluid small="4" >
+            So is this is fluid
+          </structure-fluid>
+          <structure-fluid small="4" >
+            Me too.
+          </structure-fluid>
+    </structure-solid>
+    <structure-solid width="80" height="100" class="Skin">
+        <structure-solid height="50">
+        </structure-solid>
+        <structure-solid>
+        </structure-solid>
+    </structure-solid>
 </html>
 ```
 
