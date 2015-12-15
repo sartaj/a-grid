@@ -1,7 +1,7 @@
 // Requires
 
-  // Core 
-  
+  // Core
+
   var gulp = require('gulp');
   var clean = require('gulp-clean');
 
@@ -11,6 +11,7 @@
       uglify = require('gulp-uglify'),
       minifyHTML = require('gulp-minify-html'),
       minifyCSS = require('gulp-minify-css'),
+      myth = require('gulp-myth');
       vulcanize = require('gulp-vulcanize'),
       concat = require('gulp-concat');
 
@@ -29,21 +30,21 @@
 
   function release(importance) {
 
-    // get all the files to bump version in 
+    // get all the files to bump version in
     return gulp.src(['./*.json'])
 
-      // bump the version number in those files 
+      // bump the version number in those files
       .pipe(bump({type: importance}))
 
-      // save it back to filesystem 
+      // save it back to filesystem
       .pipe(gulp.dest('./'))
 
-      // commit the changed version number 
+      // commit the changed version number
       .pipe(git.commit('update version'))
 
-      // read only one file to get the version number 
+      // read only one file to get the version number
       .pipe(filter('package.json'))
-      // **tag it in the repository** 
+      // **tag it in the repository**
       .pipe(tag_version());
 
   }
@@ -77,6 +78,7 @@
     gulp.task('prepare-css', function() {
 
       return gulp.src('src/**/*.css')
+        .pipe(myth())
         .pipe(minifyCSS())
         .pipe(gulp.dest('./.tmp'));
 
@@ -92,12 +94,11 @@
 
 // Utilities
 
-  gulp.task('clean', function() { return 
-    
+  gulp.task('clean', function() { return
+
     return gulp.src('./.tmp')
       .pipe(clean())
     .pipe(gulp.src('./dist')
       .pipe(clean()));
-  
-  });
 
+  });

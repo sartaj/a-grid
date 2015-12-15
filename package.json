@@ -26,6 +26,7 @@
     "gulp-git": "latest",
     "gulp-minify-css": "latest",
     "gulp-minify-html": "latest",
+    "gulp-myth": "^1.1.0",
     "gulp-tag-version": "latest",
     "gulp-uglify": "latest",
     "gulp-vulcanize": "latest"
