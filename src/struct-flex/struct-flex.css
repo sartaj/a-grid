@@ -1,0 +1,153 @@
+/*<structure-flex
+flow|direction="row|row-reverse|column|column-reverse"
+wrap="nowrap|wrap|wrap-reverse"
+align-item="start|end|center|baseline|stretch"
+align-group="start|end|center|baseline|stretch">
+ <structure-item
+  order="#"
+  shrink="true|false"
+  grow="true|false"
+  basis|size="content"
+  align="start|end|center|baseline|stretch">
+ </structure-item>
+</structure=flex>*/
+
+struct-flex {
+
+}
+
+struct-flex[direction="row" i],
+struct-flex[flow="row" i] {
+
+}
+
+struct-flex[direction="row-reverse" i],
+struct-flex[flow="row-reverse" i] {
+
+}
+
+struct-flex[direction="column" i],
+struct-flex[flow="column" i] {
+
+}
+
+struct-flex[direction="column-reverse" i],
+struct-flex[flow="column-reverse" i] {
+
+}
+
+
+struct-flex[wrap="wrap" i],
+struct-flex[wrap="true" i] {
+
+}
+
+struct-flex[wrap="no-wrap" i],
+struct-flex[wrap="false" i] {
+
+}
+
+
+struct-flex[wrap="wrap-reverse" i],
+struct-flex[wrap="reverse" i] {
+
+}
+
+
+struct-flex[align-item="start" i] {
+
+}
+
+struct-flex[align-item="end" i] {
+
+}
+
+struct-flex[align-item="center" i] {
+
+}
+
+struct-flex[align-item="baseline" i] {
+
+}
+
+struct-flex[align-item="stretch" i] {
+
+}
+
+struct-flex[align-group="start" i] {
+
+}
+
+struct-flex[align-group="end" i] {
+
+}
+
+struct-flex[align-group="center" i] {
+
+}
+
+struct-flex[align-group="baseline" i] {
+
+}
+
+struct-flex[align-group="stretch" i] {
+
+}
+
+struct-flex > struct-item[order] {
+
+}
+
+struct-flex > struct-item[shrink="true" i ] {
+
+}
+
+/*struct-flex > struct-item[shrink="0" i],
+struct-flex > struct-item[shrink="false" i] {
+
+}*/
+
+/*struct-flex > struct-item[grow="true" i] {
+
+}
+
+struct-flex > struct-item[basis="auto" i ],
+struct-flex > struct-item[size="auto" i ] {
+
+}
+
+struct-flex > struct-item[basis="auto" i ],
+struct-flex > struct-item[size="auto" i ] {
+
+}
+
+struct-flex > struct-item[basis="auto" i ],
+struct-flex > struct-item[size="auto" i ] {
+
+}*/
+
+
+
+struct-flex > struct-item[align="auto"] {
+
+}
+
+struct-flex > struct-item[align="start"] {
+
+}
+
+struct-flex > struct-item[align="end"] {
+
+}
+
+struct-flex > struct-item[align="center"] {
+
+}
+
+struct-flex > struct-item[align="baseline"] {
+
+}
+
+struct-flex > struct-item[align="stretch"] {
+
+}

@@ -78,7 +78,7 @@
     gulp.task('prepare-css', function() {
 
       return gulp.src('src/**/*.css')
-        .pipe(myth())
+        // .pipe(myth())
         .pipe(minifyCSS())
         .pipe(gulp.dest('./.tmp'));
 
