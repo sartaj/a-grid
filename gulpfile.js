@@ -68,7 +68,7 @@
 
     gulp.task('prepare-js', function() {
 
-      return gulp.src('src/**/*.js')
+      return gulp.src('lib/**/*.js')
         .pipe(browserify())
         .pipe(uglify())
         .pipe(gulp.dest('./.tmp'));

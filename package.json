@@ -4,7 +4,8 @@
   "description": "A lightweight grid web component build around of viewports and fluid grids. No dependencies.",
   "main": "index.js",
   "scripts": {
-    "test": "gulp test"
+    "test": "gulp test",
+    "build": "babel src -d lib -x .es6 -s true"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,8 @@
   },
   "homepage": "https://github.com/sartaj/structure",
   "devDependencies": {
+    "babel-cli": "^6.4.0",
+    "babel-preset-es2015": "^6.3.13",
     "gulp": "latest",
     "gulp-browserify": "latest",
     "gulp-bump": "latest",
