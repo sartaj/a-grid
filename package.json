@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "gulp test",
-    "build": "babel src -d lib -x .es6 -s true"
+    "prebuild": "rm -rf build && mkdir build",
+    "build": "babel src -d build -x .es6 -s true && gulp build"
   },
   "repository": {
     "type": "git",

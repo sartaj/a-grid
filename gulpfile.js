@@ -68,7 +68,10 @@
 
     gulp.task('prepare-js', function() {
 
-      return gulp.src('lib/**/*.js')
+      gulp.src('build/**/*.map')
+        .pipe(gulp.dest('./.tmp'));
+
+      return gulp.src('build/**/*.js')
         .pipe(browserify())
         .pipe(uglify())
         .pipe(gulp.dest('./.tmp'));
@@ -98,7 +101,9 @@
 
     return gulp.src('./.tmp')
       .pipe(clean())
-    .pipe(gulp.src('./dist')
-      .pipe(clean()));
+      .pipe(
+	gulp.src('./dist')
+            .pipe(clean())
+      );
 
   });

@@ -16,7 +16,7 @@ structFlex.createdCallback = function() {
             'flex:' + [attrGrow || 1, attrShrink || 1, attrSize || 'auto'].join(' '),
             '-ms-flex:' + [attrGrow || 1, attrShrink || 1, attrSize || 'auto'].join(' '),
             '-moz-box-flex:' + [attrGrow || 1, attrShrink || 1, attrSize || 'auto'].join(' '),
-            '-webkit-box-flex:' + [attrGrow || 1, attrShrink || 1, attrSize || 'auto'].join(' ')
+            '-webkit-flex:' + [attrGrow || 1, attrShrink || 1, attrSize || 'auto'].join(' ')
         ].join(';'));
     }
 };
@@ -43,7 +43,7 @@ structItem.createdCallback = function() {
         'flex:' + [attrGrow || 1, attrShrink || 1, attrSize || 'auto'].join(' '),
         '-ms-flex:' + [attrGrow || 1, attrShrink || 1, attrSize || 'auto'].join(' '),
         '-moz-box-flex:' + [attrGrow || 1, attrShrink || 1, attrSize || 'auto'].join(' '),
-        '-webkit-box-flex:' + [attrGrow || 1, attrShrink || 1, attrSize || 'auto'].join(' ')
+        '-webkit-flex:' + [attrGrow || 1, attrShrink || 1, attrSize || 'auto'].join(' ')
     ].join(';'));
 };
 
