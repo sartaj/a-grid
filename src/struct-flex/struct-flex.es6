@@ -10,8 +10,7 @@ function setAttributes() {
         // Don't waste time if none are specified.
         if (!(attrGrow || attrShrink || attrSize)) return;
 
-        let saved = this.getAttribute('data-sstyle');
-        if (!saved) this.setAttribute('data-sstyle',saved=(this.getAttribute('style')||""));
+        let saved = this.getAttribute('data-style')||"";
 
         this.setAttribute('style', saved.split(';').concat([
             ['flex:', attrGrow, attrShrink, attrSize || 'auto'].join(' '),
@@ -21,7 +20,6 @@ function setAttributes() {
             ]).join(';'));
 
 }
-
 function createCallback() {
     if (this.tagName === 'STRUCT-ITEM' || (this.parentElement && 'STRUCT-FLEX' === this.parentElement.tagName)) {
         if (this.getAttribute('data-watch')==null) {
@@ -30,16 +28,31 @@ function createCallback() {
             this.setAttribute('data-watch','1')
             setAttributes.call(this);
             let mWatcher = new MutationObserver((mutations) => {
-                mutations.filter(mut => mut.type=='attributes')
-                         .forEach(mut => console.table(mut));
+                mutations/*.filter(mut => mut.type!='attributes')*/
+                         .forEach(setAttributes.bind(this)) //mut => console.log('Attributes changed %s %O %O',this.getAttribute('data-watch'),this,mut));
             }).observe(this,{ attributes: true, childList: false, characterData: false, subtree: false, attributeFilter: attrList });
         } else {
-            var t = this.getAttribute('data-watch')*1+1;
+            let t = this.getAttribute('data-watch')*1+1;
             console.warn('create callback called %s times on same node %O',t,this);
             this.setAttribute('data-watch',t);
         }
     }
 }
+ 
+ /*
+structFlex.attachedCallback = function() {
+    console.log("Attached %s %O",this.getAttribute('data-watch'),this);
+}
+
+structFlex.detachedCallback = function() {
+    console.log("Detached %s %O",this.getAttribute('data-watch'),this);
+}
+/*
+structFlex.attributeChangedCallback = function() {
+    console.log("Attributes Changed %s %O",this.getAttribute('data-watch'),this);
+    setAttributes.apply(this,arguments);
+}
+*/
 
 structFlex.createdCallback = function() {
     // Call common creation code. 
@@ -58,7 +71,19 @@ structItem.createdCallback = function() {
     // Call common creation code. 
     createCallback.apply(this,arguments);
 }
-
+/*
+structItem.detachedCallback = function() {
+    console.log("Detached from %O",this);
+}
+structItem.attachedCallback = function() {
+    console.log("Attached %s %O",this.getAttribute('data-watch'),this);
+}
+/*
+structItem.attributeChangedCallback = function() {
+    console.log("Attributes Changed %s %O",this.getAttribute('data-watch'),this);
+    setAttributes.apply(this,arguments);
+}
+*/
 // Registers element in the main document
 document.registerElement('struct-item', {
     prototype: structItem
