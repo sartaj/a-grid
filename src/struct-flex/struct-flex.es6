@@ -22,8 +22,8 @@ function setAttributes() {
 
 }
 
-structFlex.createdCallback = function() {
-    if (this.parentElement && 'STRUCT-FLEX' === this.parentElement.tagName) {
+function createCallback() {
+    if (this.tagName === 'STRUCT-ITEM' || (this.parentElement && 'STRUCT-FLEX' === this.parentElement.tagName)) {
         if (this.getAttribute('data-watch')==null) {
             // List of attributes that (when changed) can affect the layout and should be observed.
             let attrList = ['basis','size','grow','shrink'];
@@ -39,7 +39,12 @@ structFlex.createdCallback = function() {
             this.setAttribute('data-watch',t);
         }
     }
-};
+}
+
+structFlex.createdCallback = function() {
+    // Call common creation code. 
+    createCallback.apply(this,arguments);
+}
 // Registers element in the main document
 document.registerElement('struct-flex', {
     prototype: structFlex
@@ -50,21 +55,9 @@ const structItem = Object.create(HTMLElement.prototype);
 
 // Fires when an instance of the element is created
 structItem.createdCallback = function() {
-    if (this.getAttribute('data-watch')==null) {
-        // List of attributes that (when changed) can affect the layout and should be observed.
-        let attrList = ['basis','size','grow','shrink'];
-        this.setAttribute('data-watch','1')
-        setAttributes.call(this);
-        let mWatcher = new MutationObserver((mutations) => {
-            mutations.filter(mut => mut.type=='attributes')
-                     .forEach(mut => console.table(mut));
-        }).observe(this,{ attributes: true, childList: false, characterData: false, subtree: false, attributeFilter: attrList });
-    } else {
-        var t = this.getAttribute('data-watch')*1+1;
-        console.warn('create callback called %s times on same node %O',t,this);
-        this.setAttribute('data-watch',t);
-    }
-};
+    // Call common creation code. 
+    createCallback.apply(this,arguments);
+}
 
 // Registers element in the main document
 document.registerElement('struct-item', {
