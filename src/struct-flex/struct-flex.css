@@ -125,11 +125,6 @@ struct-flex[justify-content="space-between"] {
 	justify-content: space-between;
 }
 
-struct-flex[justify-group="space-evenly"] ,
-struct-flex[justify-content="space-evenly"] {
-	justify-content: space-evenly;
-}
-
 struct-flex[align-group="start"] ,
 struct-flex[align-content="start"] {
 	align-content: flex-start;
@@ -229,12 +224,16 @@ struct-flex[flow="column-reverse"] {
 }
 
 
+struct-flex[wrap=true],
+struct-flex[wrap=yes],
 struct-flex[wrap] {
 	-webkit-flex-wrap: wrap;
 	    -ms-flex-wrap: wrap;
 	        flex-wrap: wrap;
 }
 
+struct-flex[wrap=false],
+struct-flex[wrap=no],
 struct-flex[nowrap] {
 	-webkit-flex-wrap: nowrap;
 	    -ms-flex-wrap: nowrap;
@@ -327,14 +326,6 @@ struct-flex[justify-content="baseline"] {
 	        justify-content: baseline;
 }
 
-struct-flex[justify-group="stretch"] ,
-struct-flex[justify-content="stretch"] {
-	-webkit-box-pack: stretch;
-	-webkit-justify-content: stretch;
-	    -ms-flex-pack: stretch;
-	        justify-content: stretch;
-}
-
 struct-flex[justify-group="space-around"] ,
 struct-flex[justify-content="space-around"] {
 	-webkit-justify-content: space-around;
@@ -348,14 +339,6 @@ struct-flex[justify-content="space-between"] {
 	-webkit-justify-content: space-between;
 	    -ms-flex-pack: justify;
 	        justify-content: space-between;
-}
-
-struct-flex[justify-group="space-evenly"] ,
-struct-flex[justify-content="space-evenly"] {
-	-webkit-box-pack: space-evenly;
-	-webkit-justify-content: space-evenly;
-	    -ms-flex-pack: space-evenly;
-	        justify-content: space-evenly;
 }
 
 struct-flex[align-group="start"] ,
