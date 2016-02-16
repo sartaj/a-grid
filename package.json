@@ -12,7 +12,18 @@
     "type": "git",
     "url": "https://github.com/sartaj/structure.git"
   },
-  "author": "Sartaj",
+  "author": {
+    "name" : "Brandon Myers"
+   , "email" : "trakkasure@gmail.com"
+   , "url" : "http://github.com/trakkasure"
+  },
+  "contributors": [
+    {
+      "name" : "Sartaj Chowdury"
+     , "email" : "trakkasure@gmail.com"
+     , "url" : "http://github.com/sartaj"
+    }
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/sartaj/structure/issues"

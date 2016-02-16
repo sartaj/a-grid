@@ -2,22 +2,42 @@
 // Creates an object based in the HTML Element prototype
 const structFlex = Object.create(HTMLElement.prototype);
 
-structFlex.createdCallback = function() {
-    if (this.parentElement.tagName === 'STRUCT-FLEX') {
-	    let attrGrow = this.getAttribute('grow') || null;
-	    let attrShrink = this.getAttribute('shrink') || null;
-	    let attrSize = this.getAttribute('basis') || this.getAttribute('size') || null;
+function setAttributes() {
+    let attrGrow = this.hasAttribute('grow')?this.getAttribute('grow'):0;
+    let attrShrink = this.hasAttribute('shrink')?this.getAttribute('shrink'):null;
+    let attrSize = this.hasAttribute('basis')||this.hasAttribute('size')?this.getAttribute('basis')||this.getAttribute('size'):null;
 
         // Don't waste time if none are specified.
         if (!(attrGrow || attrShrink || attrSize)) return;
 
-        let currentStyle = this.getAttribute('style');
-        this.setAttribute('style', [
-            'flex:' + [attrGrow || 1, attrShrink || 1, attrSize || 'auto'].join(' '),
-            '-ms-flex:' + [attrGrow || 1, attrShrink || 1, attrSize || 'auto'].join(' '),
-            '-moz-box-flex:' + [attrGrow || 1, attrShrink || 1, attrSize || 'auto'].join(' '),
-            '-webkit-flex:' + [attrGrow || 1, attrShrink || 1, attrSize || 'auto'].join(' ')
-        ].join(';'));
+        let saved = this.getAttribute('data-sstyle');
+        if (!saved) this.setAttribute('data-sstyle',saved=(this.getAttribute('style')||""));
+
+        this.setAttribute('style', saved.split(';').concat([
+            ['flex:', attrGrow, attrShrink, attrSize || 'auto'].join(' '),
+            ['-ms-flex:', attrGrow, attrShrink, attrSize || 'auto'].join(' '),
+            ['-moz-box-flex:', attrGrow, attrShrink, attrSize || 'auto'].join(' '),
+            ['-webkit-flex:', attrGrow, attrShrink, attrSize || 'auto'].join(' ')
+            ]).join(';'));
+
+}
+
+structFlex.createdCallback = function() {
+    if (this.parentElement && 'STRUCT-FLEX' === this.parentElement.tagName) {
+        if (this.getAttribute('data-watch')==null) {
+            // List of attributes that (when changed) can affect the layout and should be observed.
+            let attrList = ['basis','size','grow','shrink'];
+            this.setAttribute('data-watch','1')
+            setAttributes.call(this);
+            let mWatcher = new MutationObserver((mutations) => {
+                mutations.filter(mut => mut.type=='attributes')
+                         .forEach(mut => console.table(mut));
+            }).observe(this,{ attributes: true, childList: false, characterData: false, subtree: false, attributeFilter: attrList });
+        } else {
+            var t = this.getAttribute('data-watch')*1+1;
+            console.warn('create callback called %s times on same node %O',t,this);
+            this.setAttribute('data-watch',t);
+        }
     }
 };
 // Registers element in the main document
@@ -30,21 +50,20 @@ const structItem = Object.create(HTMLElement.prototype);
 
 // Fires when an instance of the element is created
 structItem.createdCallback = function() {
-
-    let attrGrow = this.getAttribute('grow') || null;
-    let attrShrink = this.getAttribute('shrink') || null;
-    let attrSize = this.getAttribute('basis') || this.getAttribute('size') || null;
-
-    // Don't waste time if none are specified.
-    if (!(attrGrow || attrShrink || attrSize)) return;
-
-    let currentStyle = this.getAttribute('style');
-    this.setAttribute('style', [
-        'flex:' + [attrGrow || 1, attrShrink || 1, attrSize || 'auto'].join(' '),
-        '-ms-flex:' + [attrGrow || 1, attrShrink || 1, attrSize || 'auto'].join(' '),
-        '-moz-box-flex:' + [attrGrow || 1, attrShrink || 1, attrSize || 'auto'].join(' '),
-        '-webkit-flex:' + [attrGrow || 1, attrShrink || 1, attrSize || 'auto'].join(' ')
-    ].join(';'));
+    if (this.getAttribute('data-watch')==null) {
+        // List of attributes that (when changed) can affect the layout and should be observed.
+        let attrList = ['basis','size','grow','shrink'];
+        this.setAttribute('data-watch','1')
+        setAttributes.call(this);
+        let mWatcher = new MutationObserver((mutations) => {
+            mutations.filter(mut => mut.type=='attributes')
+                     .forEach(mut => console.table(mut));
+        }).observe(this,{ attributes: true, childList: false, characterData: false, subtree: false, attributeFilter: attrList });
+    } else {
+        var t = this.getAttribute('data-watch')*1+1;
+        console.warn('create callback called %s times on same node %O',t,this);
+        this.setAttribute('data-watch',t);
+    }
 };
 
 // Registers element in the main document
