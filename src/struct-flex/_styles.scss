@@ -4,10 +4,21 @@ $row: (
 	row-reverse: horizontal,
 	column-reverse: vertical
 );
+$direction: (
+	row: normal,
+	column: normal,
+	row-reverse: reverse,
+	column-reverse: reverse
+);
+$align: (
+);
+
+$justify: (
+);
 
 @mixin direction($dir) {
-	-webkit-box-orient: $row;
-	-webkit-box-direction: if($dir='row',"horizontal","vertical");
+	-webkit-box-orient: map-get($row,$dir);
+	-webkit-box-direction: map-get($direction,$dir);
 	-webkit-flex-direction: row;
 	    -ms-flex-direction: row;
 	        flex-direction: row;
@@ -16,40 +27,11 @@ $row: (
 div[is="struct-flex"],
 struct-flex {
 
-	&[direction#{$size}="row"],
-	&[flow#{$size}="row"] {
-		-webkit-box-orient: horizontal;
-		-webkit-box-direction: normal;
-		-webkit-flex-direction: row;
-		    -ms-flex-direction: row;
-		        flex-direction: row;
-	}
-
-	&[direction#{$size}="row-reverse"],
-	&[flow#{$size}="row-reverse"] {
-		-webkit-box-orient: horizontal;
-		-webkit-box-direction: reverse;
-		-webkit-flex-direction: row-reverse;
-		    -ms-flex-direction: row-reverse;
-		        flex-direction: row-reverse;
-	}
-
-	&[direction#{$size}="column"],
-	&[flow#{$size}="column"] {
-		-webkit-box-orient: vertical;
-		-webkit-box-direction: normal;
-		-webkit-flex-direction: column;
-		    -ms-flex-direction: column;
-		        flex-direction: column;
-	}
-
-	&[direction#{$size}="column-reverse"],
-	&[flow#{$size}="column-reverse"] {
-		-webkit-box-orient: vertical;
-		-webkit-box-direction: reverse;
-		-webkit-flex-direction: column-reverse;
-		    -ms-flex-direction: column-reverse;
-		        flex-direction: column-reverse;
+	@each $dir in (row,row-reverse,column,column-reverse) {
+		&[direction#{$size}="#{$dir}"],
+		&[flow#{$size}="#{$dir}"] {
+			@include direction($dir);
+		}
 	}
 
 	&[wrap#{$size}=true],
@@ -82,18 +64,10 @@ struct-flex {
 		-webkit-align-items: start;
 		    -ms-flex-align: start;
 		        align-items: start;
-		-webkit-box-align: start;
-		-webkit-align-items: flex-start;
-		    -ms-flex-align: start;
-		        align-items: flex-start;
 	}
 
 	&[align-items#{$size}="end"],
 	&[end#{$size}] {
-		-webkit-box-align: end;
-		-webkit-align-items: end;
-		    -ms-flex-align: end;
-		        align-items: end;
 		-webkit-box-align: end;
 		-webkit-align-items: flex-end;
 		    -ms-flex-align: end;
