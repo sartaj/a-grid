@@ -23,21 +23,22 @@ struct-item {
 $breakpoints: (
   "" : (),
   -small: (
+  	/* @ base font size of 16, this is less than 641px; */
   	max-width: 40rem
   ),
-  -medium: (
+  -medium: ( /* @ base font size of 16, this is 641px - 1024px */
   	min-width: 40.063rem,
   	max-width: 64rem
   ),
-  -large: (
+  -large: /* @ base font size of 16, this is 1025px - 1440px */(
   	min-width:64.063rem,
   	max-width:90rem
   ),
-  -xlarge: (
+  -xlarge: /* @ base font size of 16, this is 1440px - 1920px */(
   	min-width:90.063rem,
   	max-width:120rem
   ),
-  -xxlarge: (
+  -xxlarge: /* @ base font size of 16, this is greater then 1920px */(
   	min-width: 120.063rem
   )
 );

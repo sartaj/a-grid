@@ -2,14 +2,14 @@
 // Creates an object based in the HTML Element prototype
 
 (function() {
-    document.addEventListener('animationEnd', dispatchEvent, false);
+    document.addEventListener('animationend', dispatchEvent, false);
 
     // check the animation name and operate accordingly
     var currentSize = "";
     function dispatchEvent(event) {
-        if (event.animationName.substr(0,9)=="min-width") return;
+        if (event.animationName.substr(0,9)!=="min-width") return;
         currentSize = event.animationName.split('-').pop();
-        var size;
+        let size;
         if (currentSize=='width') {
             currentSize="";
             size="";
@@ -17,34 +17,37 @@
             size="-"+currentSize;
         }
         //console.log('Size changed to:',currentSize);
-        var attributeValues = ['basis','size','grow','shrink']
+        let attributeValues = ['basis','size','grow','shrink']
             .map(x => 'struct-flex['+x+size+'],'+'struct-item['+x+size+']')
             .join(",");
         // Select nodes that should change, and affect the change.
-        [].slice.apply(document.querySelectorAll(x)).forEach(setAttribute.call);
+        [].slice.apply(document.querySelectorAll(attributeValues)).forEach(setAttributes.bind);
     }
 
     function setAttributes() {
-        var size=currentSize?"-"+currentSize:"";
-        let grow = 'grow'+size;
-        let shrink = 'shrink'+size;
-        let basis = this.hasAttribute('size'+size)?'size'+size:'basis'+size;
+        let size=currentSize?"-"+currentSize:"";
+        let grow = this.hasAttribute('grow'+size)?'grow'+size:'grow';
+        let shrink = this.hasAttribute('shrink'+size)?'shrink'+size:'shrink';
+        let basis = this.hasAttribute('basis'+size)?'basis'+size:'basis';
+        basis = basis?basis:this.hasAttribute('size'+size)?'size'+size:'size';
 
         let attrGrow =  this.hasAttribute(grow)?this.getAttribute(grow):0;
         let attrShrink = this.hasAttribute(shrink)?this.getAttribute(shrink):null;
-        let attrSize = this.hasAttribute(basis)||this.hasAttribute('size')?this.getAttribute(basis)||this.getAttribute('size'):null;
+        let attrSize = this.hasAttribute(basis)?this.getAttribute(basis):null;
 
-            // Don't waste time if none are specified.
-            if (!(attrGrow || attrShrink || attrSize)) return;
+        //console.debug('Using %s:%s,%s:%s,%s:%s',basis,attrSize,grow,attrGrow,shrink,attrShrink);
 
-            let saved = this.getAttribute('data-style')||"";
+        // Don't waste time if none are specified.
+        if (!(attrGrow || attrShrink || attrSize)) return;
 
-            this.setAttribute('style', saved.split(';').concat([
-                ['flex:', attrGrow, attrShrink, attrSize || 'auto'].join(' '),
-                ['-ms-flex:', attrGrow, attrShrink, attrSize || 'auto'].join(' '),
-                ['-moz-box-flex:', attrGrow, attrShrink, attrSize || 'auto'].join(' '),
-                ['-webkit-flex:', attrGrow, attrShrink, attrSize || 'auto'].join(' ')
-                ]).join(';'));
+        let saved = this.getAttribute('data-style')||"";
+
+        this.setAttribute('style', saved.split(';').concat([
+            ['flex:', attrGrow, attrShrink, attrSize || 'auto'].join(' '),
+            ['-ms-flex:', attrGrow, attrShrink, attrSize || 'auto'].join(' '),
+            ['-moz-box-flex:', attrGrow, attrShrink, attrSize || 'auto'].join(' '),
+            ['-webkit-flex:', attrGrow, attrShrink, attrSize || 'auto'].join(' ')
+            ]).join(';'));
 
     }
     function createCallback() {

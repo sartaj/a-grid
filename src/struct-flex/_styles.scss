@@ -1,4 +1,4 @@
-$row: (
+$orient: (
 	row: horizontal,
 	column: vertical,
 	row-reverse: horizontal,
@@ -17,11 +17,11 @@ $justify: (
 );
 
 @mixin direction($dir) {
-	-webkit-box-orient: map-get($row,$dir);
+	-webkit-box-orient: map-get($orient,$dir);
 	-webkit-box-direction: map-get($direction,$dir);
-	-webkit-flex-direction: row;
-	    -ms-flex-direction: row;
-	        flex-direction: row;
+	-webkit-flex-direction: $dir;
+	    -ms-flex-direction: $dir;
+	        flex-direction: $dir;
 }
 
 div[is="struct-flex"],
@@ -61,9 +61,9 @@ struct-flex {
 	&[align-items#{$size}="start"],
 	&[start#{$size}] {
 		-webkit-box-align: start;
-		-webkit-align-items: start;
+		-webkit-align-items: flex-start;
 		    -ms-flex-align: start;
-		        align-items: start;
+		        align-items: flex-start;
 	}
 
 	&[align-items#{$size}="end"],
