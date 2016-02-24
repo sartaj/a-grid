@@ -42,12 +42,23 @@ $breakpoints: (
   )
 );
 
+body {
+  animation-duration: 0.001s;
+}
 
 @each $size, $map in $breakpoints {
   $min: if(map-get($map,min-width),"and (min-width: "+map-get($map,min-width)+")","");
   $max: if(map-get($map,max-width),"and (max-width: "+map-get($map,max-width)+")","");
 
+  @keyframes min-width#{$size} {
+    from { clip: rect(1px, auto, auto, auto); }
+    to { clip: rect(0px, auto, auto, auto); }
+  }
+
   @media #{"only screen "+$min+$max} {
+    body {
+      animation-name: min-width#{$size}
+    }
 	@import '_styles';
   }
 
