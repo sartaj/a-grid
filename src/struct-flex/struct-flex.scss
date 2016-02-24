@@ -1,0 +1,54 @@
+div[is="struct-flex"],
+struct-flex {
+	display: flex;
+	position: relative;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+}
+div[is="struct-item"],
+struct-item {
+	display: block;
+	position: relative;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+}
+
+/* Create multiple versions of sizing based on media queries 
+   Media query sizing is based on the same numbers from Foundation.
+*/
+$breakpoints: (
+  "" : (),
+  -small: (
+  	max-width: 40rem
+  ),
+  -medium: (
+  	min-width: 40.063rem,
+  	max-width: 64rem
+  ),
+  -large: (
+  	min-width:64.063rem,
+  	max-width:90rem
+  ),
+  -xlarge: (
+  	min-width:90.063rem,
+  	max-width:120rem
+  ),
+  -xxlarge: (
+  	min-width: 120.063rem
+  )
+);
+
+
+@each $size, $map in $breakpoints {
+  $min: if(map-get($map,min-width),"and (min-width: "+map-get($map,min-width)+")","");
+  $max: if(map-get($map,max-width),"and (max-width: "+map-get($map,max-width)+")","");
+
+  @media #{"only screen "+$min+$max} {
+	@import '_styles';
+  }
+
+}
