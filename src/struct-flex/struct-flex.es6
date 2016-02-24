@@ -7,7 +7,7 @@
     // check the animation name and operate accordingly
     var currentSize = "";
     function dispatchEvent(event) {
-        event.animationName.substr(0,9)=="min-width"||return;
+        if (event.animationName.substr(0,9)=="min-width") return;
         currentSize = event.animationName.split('-').pop();
         var size;
         if (currentSize=='width') {
